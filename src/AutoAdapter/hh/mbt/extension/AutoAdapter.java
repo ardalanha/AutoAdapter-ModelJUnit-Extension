@@ -128,7 +128,7 @@ public class AutoAdapter {
 							args.add(Param.get(2+(j*6)));
 							args.add(Param.get(3+(j*6)));
 							args.add(Param.get(4+(j*6)));
-							logPrintLine("trying to generate abstract data. /label: "+Param.get(3)+"/target order: "+i+"/type: "+type.getName()+"/generator: "+Param.get(4));
+							logPrintLine("trying to generate abstract data. /label: "+Param.get(3+(j*6))+"/target order: "+i+"/type: "+type.getName()+"/generator: "+Param.get(4+(j*6)));
 							genInputs[j] = this.generateData(type, args);
 							args.clear();
 						}
