@@ -9,6 +9,7 @@ import java.lang.reflect.Method;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
@@ -184,7 +185,10 @@ public class AutoAdapter {
 			else{
 				logPrintLine("same SUT and abstract output data types, no conversion is specified. /type: "+type_O.getName());
 			}
-			logPrintLine("output data from SUT is: "+output);
+			if(output instanceof Object[])
+				logPrintLine("output data from SUT is: "+Arrays.deepToString((Object[]) output));
+			else
+				logPrintLine("output data from SUT is: "+output);
 		}
 		
 				
