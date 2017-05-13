@@ -7,7 +7,7 @@ import hh.mbt.SUT.StackDouble.SimpleStackDouble;
 import hh.mbt.SUT.StackString.SimpleStackString;
 import hh.mbt.extension.AutoAdapter;
 import hh.mbt.extension.DataStorage;
-import hh.mbt.extension.model.StackEFSM.AbstractOperations.StackOperations;
+import hh.mbt.extension.model.StackEFSM.AbstractOperations.StackOps;
 import nz.ac.waikato.modeljunit.Action;
 import nz.ac.waikato.modeljunit.FsmModel;
 import nz.ac.waikato.modeljunit.RandomTester;
@@ -34,7 +34,7 @@ public class StackEFSM implements FsmModel {
     
     //Adapter class connects abstract methods of model to SUT
     private AutoAdapter adapter;
-    private StackOperations stackOp = new StackOperations();
+    private StackOps stackOp = new StackOps();
     
     final ArrayList<Object> Push = stackOp.Push();
     final ArrayList<Object> Pop = stackOp.Pop();

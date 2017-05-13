@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import hh.mbt.extension.AbstractOperation;
 
-//CRUD abstract operation with flight booking web service client concrete configuration
+//CRUD abstract operations with flight booking web service client concrete configuration
 //Link for SUT: https://github.com/raminarmanfar/Online-Ticket-booking-Distributed-program-using-RESTFul-Tomcat-JAVA-
 
 public class FlightBookingOps {	

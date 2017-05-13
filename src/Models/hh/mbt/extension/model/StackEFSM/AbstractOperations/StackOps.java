@@ -4,11 +4,10 @@ import java.util.ArrayList;
 
 import hh.mbt.extension.AbstractOperation;
 
-
-public class StackOperations {
+public class StackOps {
 	
 	private AbstractOperation absOp = new AbstractOperation();
-		
+	
 	public ArrayList<Object> Push(){
 		absOp.newOp();
 		absOp.addtargetName("push");
@@ -37,5 +36,6 @@ public class StackOperations {
 		absOp.setReturnType(int.class);
 		return absOp.createOp();
 	}
+
 
 }

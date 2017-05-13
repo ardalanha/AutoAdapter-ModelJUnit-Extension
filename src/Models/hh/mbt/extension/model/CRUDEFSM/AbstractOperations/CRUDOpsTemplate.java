@@ -6,10 +6,9 @@ import hh.mbt.extension.AbstractOperation;
 
 //CRUD Abstract Operations Template
 
-
-public class CRUDAbsOpsTemplate {
+class CRUDOpsTemplate {
 	
-	private AbstractOperation absOp = new AbstractOperation();
+private AbstractOperation absOp = new AbstractOperation();
 	
 	public ArrayList<Object> Create(){
 		absOp.newOp();
@@ -45,5 +44,6 @@ public class CRUDAbsOpsTemplate {
 		absOp.setReturnType(Object[].class);
 		return absOp.createOp();
 	}
+
 
 }
