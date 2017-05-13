@@ -11,8 +11,8 @@ public class DataGenerator {
 	
 	@Generator(label = "default", type = Integer.class)
 	public Integer intGen(){
-		int min = 0;
-		int max = 10;
+		int min = 1;
+		int max = 20;
 		int testData = fakeData.baseProducer().randomBetween(min, max);
 		return testData;
 	}
