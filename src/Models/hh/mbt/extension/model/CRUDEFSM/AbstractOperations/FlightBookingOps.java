@@ -11,6 +11,12 @@ public class FlightBookingOps {
 
 	private AbstractOperation absOp = new AbstractOperation();
 	
+	public ArrayList<Object> Init(){
+		absOp.newOp();
+		absOp.addtargetName("init");
+		return absOp.createOp();
+	}
+	
 	public ArrayList<Object> Create(){
 		absOp.newOp();
 		absOp.addtargetName("BookFlight");

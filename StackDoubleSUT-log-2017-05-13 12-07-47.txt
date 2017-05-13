@@ -30,7 +30,7 @@ output data from SUT is: true
 method is found as push in SUT
 trying to generate abstract data. /label: PushData/target order: 0/type: java.lang.Integer/generator: default
 default generator for class java.lang.Integer is found
-generated data: 8 / label: PushData
+generated data: 4 / label: PushData
 trying to concretize/convert generated data. /target type: java.lang.Double/converter: default
 default converter from java.lang.Integer to java.lang.Double is found
 SUT method push is executed
@@ -44,7 +44,7 @@ method is found as pop in SUT
 SUT method pop is executed
 trying to make output data abstract. /from java.lang.Double to java.lang.Integer/converter: default
 default converter from java.lang.Double to java.lang.Integer is found
-output data from SUT is: 8
+output data from SUT is: 4
 
 method is found as isEmpty in SUT
 SUT method isEmpty is executed
@@ -54,7 +54,7 @@ output data from SUT is: true
 method is found as push in SUT
 trying to generate abstract data. /label: PushData/target order: 0/type: java.lang.Integer/generator: default
 default generator for class java.lang.Integer is found
-generated data: 8 / label: PushData
+generated data: 4 / label: PushData
 trying to concretize/convert generated data. /target type: java.lang.Double/converter: default
 default converter from java.lang.Integer to java.lang.Double is found
 SUT method push is executed
@@ -68,7 +68,79 @@ method is found as pop in SUT
 SUT method pop is executed
 trying to make output data abstract. /from java.lang.Double to java.lang.Integer/converter: default
 default converter from java.lang.Double to java.lang.Integer is found
-output data from SUT is: 8
+output data from SUT is: 4
+
+method is found as isEmpty in SUT
+SUT method isEmpty is executed
+same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
+output data from SUT is: true
+
+method is found as push in SUT
+trying to generate abstract data. /label: PushData/target order: 0/type: java.lang.Integer/generator: default
+default generator for class java.lang.Integer is found
+generated data: 7 / label: PushData
+trying to concretize/convert generated data. /target type: java.lang.Double/converter: default
+default converter from java.lang.Integer to java.lang.Double is found
+SUT method push is executed
+
+method is found as isEmpty in SUT
+SUT method isEmpty is executed
+same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
+output data from SUT is: false
+
+method is found as pop in SUT
+SUT method pop is executed
+trying to make output data abstract. /from java.lang.Double to java.lang.Integer/converter: default
+default converter from java.lang.Double to java.lang.Integer is found
+output data from SUT is: 7
+
+method is found as isEmpty in SUT
+SUT method isEmpty is executed
+same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
+output data from SUT is: true
+
+method is found as push in SUT
+trying to generate abstract data. /label: PushData/target order: 0/type: java.lang.Integer/generator: default
+default generator for class java.lang.Integer is found
+generated data: 1 / label: PushData
+trying to concretize/convert generated data. /target type: java.lang.Double/converter: default
+default converter from java.lang.Integer to java.lang.Double is found
+SUT method push is executed
+
+method is found as isEmpty in SUT
+SUT method isEmpty is executed
+same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
+output data from SUT is: false
+
+method is found as pop in SUT
+SUT method pop is executed
+trying to make output data abstract. /from java.lang.Double to java.lang.Integer/converter: default
+default converter from java.lang.Double to java.lang.Integer is found
+output data from SUT is: 1
+
+method is found as isEmpty in SUT
+SUT method isEmpty is executed
+same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
+output data from SUT is: true
+
+method is found as push in SUT
+trying to generate abstract data. /label: PushData/target order: 0/type: java.lang.Integer/generator: default
+default generator for class java.lang.Integer is found
+generated data: 5 / label: PushData
+trying to concretize/convert generated data. /target type: java.lang.Double/converter: default
+default converter from java.lang.Integer to java.lang.Double is found
+SUT method push is executed
+
+method is found as isEmpty in SUT
+SUT method isEmpty is executed
+same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
+output data from SUT is: false
+
+method is found as pop in SUT
+SUT method pop is executed
+trying to make output data abstract. /from java.lang.Double to java.lang.Integer/converter: default
+default converter from java.lang.Double to java.lang.Integer is found
+output data from SUT is: 5
 
 method is found as isEmpty in SUT
 SUT method isEmpty is executed
@@ -98,78 +170,6 @@ method is found as isEmpty in SUT
 SUT method isEmpty is executed
 same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
 output data from SUT is: true
-
-method is found as push in SUT
-trying to generate abstract data. /label: PushData/target order: 0/type: java.lang.Integer/generator: default
-default generator for class java.lang.Integer is found
-generated data: 0 / label: PushData
-trying to concretize/convert generated data. /target type: java.lang.Double/converter: default
-default converter from java.lang.Integer to java.lang.Double is found
-SUT method push is executed
-
-method is found as isEmpty in SUT
-SUT method isEmpty is executed
-same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
-output data from SUT is: false
-
-method is found as pop in SUT
-SUT method pop is executed
-trying to make output data abstract. /from java.lang.Double to java.lang.Integer/converter: default
-default converter from java.lang.Double to java.lang.Integer is found
-output data from SUT is: 0
-
-method is found as isEmpty in SUT
-SUT method isEmpty is executed
-same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
-output data from SUT is: true
-
-method is found as push in SUT
-trying to generate abstract data. /label: PushData/target order: 0/type: java.lang.Integer/generator: default
-default generator for class java.lang.Integer is found
-generated data: 0 / label: PushData
-trying to concretize/convert generated data. /target type: java.lang.Double/converter: default
-default converter from java.lang.Integer to java.lang.Double is found
-SUT method push is executed
-
-method is found as isEmpty in SUT
-SUT method isEmpty is executed
-same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
-output data from SUT is: false
-
-method is found as pop in SUT
-SUT method pop is executed
-trying to make output data abstract. /from java.lang.Double to java.lang.Integer/converter: default
-default converter from java.lang.Double to java.lang.Integer is found
-output data from SUT is: 0
-
-method is found as isEmpty in SUT
-SUT method isEmpty is executed
-same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
-output data from SUT is: true
-
-method is found as push in SUT
-trying to generate abstract data. /label: PushData/target order: 0/type: java.lang.Integer/generator: default
-default generator for class java.lang.Integer is found
-generated data: 2 / label: PushData
-trying to concretize/convert generated data. /target type: java.lang.Double/converter: default
-default converter from java.lang.Integer to java.lang.Double is found
-SUT method push is executed
-
-method is found as isEmpty in SUT
-SUT method isEmpty is executed
-same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
-output data from SUT is: false
-
-method is found as pop in SUT
-SUT method pop is executed
-trying to make output data abstract. /from java.lang.Double to java.lang.Integer/converter: default
-default converter from java.lang.Double to java.lang.Integer is found
-output data from SUT is: 2
-
-method is found as isEmpty in SUT
-SUT method isEmpty is executed
-same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
-output data from SUT is: true
 
 
 
@@ -178,7 +178,7 @@ Tescase number:1
 method is found as push in SUT
 trying to generate abstract data. /label: PushData/target order: 0/type: java.lang.Integer/generator: default
 default generator for class java.lang.Integer is found
-generated data: 1 / label: PushData
+generated data: 9 / label: PushData
 trying to concretize/convert generated data. /target type: java.lang.Double/converter: default
 default converter from java.lang.Integer to java.lang.Double is found
 SUT method push is executed
@@ -191,7 +191,7 @@ output data from SUT is: false
 method is found as push in SUT
 trying to generate abstract data. /label: PushData/target order: 0/type: java.lang.Integer/generator: default
 default generator for class java.lang.Integer is found
-generated data: 2 / label: PushData
+generated data: 9 / label: PushData
 trying to concretize/convert generated data. /target type: java.lang.Double/converter: default
 default converter from java.lang.Integer to java.lang.Double is found
 SUT method push is executed
@@ -205,7 +205,7 @@ method is found as pop in SUT
 SUT method pop is executed
 trying to make output data abstract. /from java.lang.Double to java.lang.Integer/converter: default
 default converter from java.lang.Double to java.lang.Integer is found
-output data from SUT is: 2
+output data from SUT is: 9
 
 method is found as isEmpty in SUT
 SUT method isEmpty is executed
@@ -216,7 +216,7 @@ method is found as pop in SUT
 SUT method pop is executed
 trying to make output data abstract. /from java.lang.Double to java.lang.Integer/converter: default
 default converter from java.lang.Double to java.lang.Integer is found
-output data from SUT is: 1
+output data from SUT is: 9
 
 method is found as isEmpty in SUT
 SUT method isEmpty is executed
@@ -226,7 +226,7 @@ output data from SUT is: true
 method is found as push in SUT
 trying to generate abstract data. /label: PushData/target order: 0/type: java.lang.Integer/generator: default
 default generator for class java.lang.Integer is found
-generated data: 1 / label: PushData
+generated data: 5 / label: PushData
 trying to concretize/convert generated data. /target type: java.lang.Double/converter: default
 default converter from java.lang.Integer to java.lang.Double is found
 SUT method push is executed
@@ -243,7 +243,7 @@ Tescase number:2
 method is found as push in SUT
 trying to generate abstract data. /label: PushData/target order: 0/type: java.lang.Integer/generator: default
 default generator for class java.lang.Integer is found
-generated data: 10 / label: PushData
+generated data: 5 / label: PushData
 trying to concretize/convert generated data. /target type: java.lang.Double/converter: default
 default converter from java.lang.Integer to java.lang.Double is found
 SUT method push is executed
@@ -257,79 +257,7 @@ method is found as pop in SUT
 SUT method pop is executed
 trying to make output data abstract. /from java.lang.Double to java.lang.Integer/converter: default
 default converter from java.lang.Double to java.lang.Integer is found
-output data from SUT is: 10
-
-method is found as isEmpty in SUT
-SUT method isEmpty is executed
-same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
-output data from SUT is: true
-
-method is found as push in SUT
-trying to generate abstract data. /label: PushData/target order: 0/type: java.lang.Integer/generator: default
-default generator for class java.lang.Integer is found
-generated data: 10 / label: PushData
-trying to concretize/convert generated data. /target type: java.lang.Double/converter: default
-default converter from java.lang.Integer to java.lang.Double is found
-SUT method push is executed
-
-method is found as isEmpty in SUT
-SUT method isEmpty is executed
-same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
-output data from SUT is: false
-
-method is found as pop in SUT
-SUT method pop is executed
-trying to make output data abstract. /from java.lang.Double to java.lang.Integer/converter: default
-default converter from java.lang.Double to java.lang.Integer is found
-output data from SUT is: 10
-
-method is found as isEmpty in SUT
-SUT method isEmpty is executed
-same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
-output data from SUT is: true
-
-method is found as push in SUT
-trying to generate abstract data. /label: PushData/target order: 0/type: java.lang.Integer/generator: default
-default generator for class java.lang.Integer is found
-generated data: 9 / label: PushData
-trying to concretize/convert generated data. /target type: java.lang.Double/converter: default
-default converter from java.lang.Integer to java.lang.Double is found
-SUT method push is executed
-
-method is found as isEmpty in SUT
-SUT method isEmpty is executed
-same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
-output data from SUT is: false
-
-method is found as push in SUT
-trying to generate abstract data. /label: PushData/target order: 0/type: java.lang.Integer/generator: default
-default generator for class java.lang.Integer is found
-generated data: 9 / label: PushData
-trying to concretize/convert generated data. /target type: java.lang.Double/converter: default
-default converter from java.lang.Integer to java.lang.Double is found
-SUT method push is executed
-
-method is found as isEmpty in SUT
-SUT method isEmpty is executed
-same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
-output data from SUT is: false
-
-method is found as pop in SUT
-SUT method pop is executed
-trying to make output data abstract. /from java.lang.Double to java.lang.Integer/converter: default
-default converter from java.lang.Double to java.lang.Integer is found
-output data from SUT is: 9
-
-method is found as isEmpty in SUT
-SUT method isEmpty is executed
-same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
-output data from SUT is: false
-
-method is found as pop in SUT
-SUT method pop is executed
-trying to make output data abstract. /from java.lang.Double to java.lang.Integer/converter: default
-default converter from java.lang.Double to java.lang.Integer is found
-output data from SUT is: 9
+output data from SUT is: 5
 
 method is found as isEmpty in SUT
 SUT method isEmpty is executed
@@ -354,6 +282,78 @@ SUT method pop is executed
 trying to make output data abstract. /from java.lang.Double to java.lang.Integer/converter: default
 default converter from java.lang.Double to java.lang.Integer is found
 output data from SUT is: 7
+
+method is found as isEmpty in SUT
+SUT method isEmpty is executed
+same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
+output data from SUT is: true
+
+method is found as push in SUT
+trying to generate abstract data. /label: PushData/target order: 0/type: java.lang.Integer/generator: default
+default generator for class java.lang.Integer is found
+generated data: 10 / label: PushData
+trying to concretize/convert generated data. /target type: java.lang.Double/converter: default
+default converter from java.lang.Integer to java.lang.Double is found
+SUT method push is executed
+
+method is found as isEmpty in SUT
+SUT method isEmpty is executed
+same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
+output data from SUT is: false
+
+method is found as push in SUT
+trying to generate abstract data. /label: PushData/target order: 0/type: java.lang.Integer/generator: default
+default generator for class java.lang.Integer is found
+generated data: 8 / label: PushData
+trying to concretize/convert generated data. /target type: java.lang.Double/converter: default
+default converter from java.lang.Integer to java.lang.Double is found
+SUT method push is executed
+
+method is found as isEmpty in SUT
+SUT method isEmpty is executed
+same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
+output data from SUT is: false
+
+method is found as pop in SUT
+SUT method pop is executed
+trying to make output data abstract. /from java.lang.Double to java.lang.Integer/converter: default
+default converter from java.lang.Double to java.lang.Integer is found
+output data from SUT is: 8
+
+method is found as isEmpty in SUT
+SUT method isEmpty is executed
+same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
+output data from SUT is: false
+
+method is found as pop in SUT
+SUT method pop is executed
+trying to make output data abstract. /from java.lang.Double to java.lang.Integer/converter: default
+default converter from java.lang.Double to java.lang.Integer is found
+output data from SUT is: 10
+
+method is found as isEmpty in SUT
+SUT method isEmpty is executed
+same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
+output data from SUT is: true
+
+method is found as push in SUT
+trying to generate abstract data. /label: PushData/target order: 0/type: java.lang.Integer/generator: default
+default generator for class java.lang.Integer is found
+generated data: 10 / label: PushData
+trying to concretize/convert generated data. /target type: java.lang.Double/converter: default
+default converter from java.lang.Integer to java.lang.Double is found
+SUT method push is executed
+
+method is found as isEmpty in SUT
+SUT method isEmpty is executed
+same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
+output data from SUT is: false
+
+method is found as pop in SUT
+SUT method pop is executed
+trying to make output data abstract. /from java.lang.Double to java.lang.Integer/converter: default
+default converter from java.lang.Double to java.lang.Integer is found
+output data from SUT is: 10
 
 method is found as isEmpty in SUT
 SUT method isEmpty is executed
@@ -367,403 +367,6 @@ Tescase number:3
 method is found as push in SUT
 trying to generate abstract data. /label: PushData/target order: 0/type: java.lang.Integer/generator: default
 default generator for class java.lang.Integer is found
-generated data: 4 / label: PushData
-trying to concretize/convert generated data. /target type: java.lang.Double/converter: default
-default converter from java.lang.Integer to java.lang.Double is found
-SUT method push is executed
-
-method is found as isEmpty in SUT
-SUT method isEmpty is executed
-same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
-output data from SUT is: false
-
-method is found as pop in SUT
-SUT method pop is executed
-trying to make output data abstract. /from java.lang.Double to java.lang.Integer/converter: default
-default converter from java.lang.Double to java.lang.Integer is found
-output data from SUT is: 4
-
-method is found as isEmpty in SUT
-SUT method isEmpty is executed
-same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
-output data from SUT is: true
-
-method is found as push in SUT
-trying to generate abstract data. /label: PushData/target order: 0/type: java.lang.Integer/generator: default
-default generator for class java.lang.Integer is found
-generated data: 0 / label: PushData
-trying to concretize/convert generated data. /target type: java.lang.Double/converter: default
-default converter from java.lang.Integer to java.lang.Double is found
-SUT method push is executed
-
-method is found as isEmpty in SUT
-SUT method isEmpty is executed
-same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
-output data from SUT is: false
-
-method is found as push in SUT
-trying to generate abstract data. /label: PushData/target order: 0/type: java.lang.Integer/generator: default
-default generator for class java.lang.Integer is found
-generated data: 5 / label: PushData
-trying to concretize/convert generated data. /target type: java.lang.Double/converter: default
-default converter from java.lang.Integer to java.lang.Double is found
-SUT method push is executed
-
-method is found as isEmpty in SUT
-SUT method isEmpty is executed
-same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
-output data from SUT is: false
-
-method is found as pop in SUT
-SUT method pop is executed
-trying to make output data abstract. /from java.lang.Double to java.lang.Integer/converter: default
-default converter from java.lang.Double to java.lang.Integer is found
-output data from SUT is: 5
-
-method is found as isEmpty in SUT
-SUT method isEmpty is executed
-same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
-output data from SUT is: false
-
-method is found as pop in SUT
-SUT method pop is executed
-trying to make output data abstract. /from java.lang.Double to java.lang.Integer/converter: default
-default converter from java.lang.Double to java.lang.Integer is found
-output data from SUT is: 0
-
-method is found as isEmpty in SUT
-SUT method isEmpty is executed
-same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
-output data from SUT is: true
-
-method is found as push in SUT
-trying to generate abstract data. /label: PushData/target order: 0/type: java.lang.Integer/generator: default
-default generator for class java.lang.Integer is found
-generated data: 3 / label: PushData
-trying to concretize/convert generated data. /target type: java.lang.Double/converter: default
-default converter from java.lang.Integer to java.lang.Double is found
-SUT method push is executed
-
-method is found as isEmpty in SUT
-SUT method isEmpty is executed
-same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
-output data from SUT is: false
-
-method is found as push in SUT
-trying to generate abstract data. /label: PushData/target order: 0/type: java.lang.Integer/generator: default
-default generator for class java.lang.Integer is found
-generated data: 6 / label: PushData
-trying to concretize/convert generated data. /target type: java.lang.Double/converter: default
-default converter from java.lang.Integer to java.lang.Double is found
-SUT method push is executed
-
-method is found as isEmpty in SUT
-SUT method isEmpty is executed
-same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
-output data from SUT is: false
-
-method is found as pop in SUT
-SUT method pop is executed
-trying to make output data abstract. /from java.lang.Double to java.lang.Integer/converter: default
-default converter from java.lang.Double to java.lang.Integer is found
-output data from SUT is: 6
-
-method is found as isEmpty in SUT
-SUT method isEmpty is executed
-same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
-output data from SUT is: false
-
-method is found as pop in SUT
-SUT method pop is executed
-trying to make output data abstract. /from java.lang.Double to java.lang.Integer/converter: default
-default converter from java.lang.Double to java.lang.Integer is found
-output data from SUT is: 3
-
-method is found as isEmpty in SUT
-SUT method isEmpty is executed
-same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
-output data from SUT is: true
-
-method is found as push in SUT
-trying to generate abstract data. /label: PushData/target order: 0/type: java.lang.Integer/generator: default
-default generator for class java.lang.Integer is found
-generated data: 5 / label: PushData
-trying to concretize/convert generated data. /target type: java.lang.Double/converter: default
-default converter from java.lang.Integer to java.lang.Double is found
-SUT method push is executed
-
-method is found as isEmpty in SUT
-SUT method isEmpty is executed
-same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
-output data from SUT is: false
-
-method is found as push in SUT
-trying to generate abstract data. /label: PushData/target order: 0/type: java.lang.Integer/generator: default
-default generator for class java.lang.Integer is found
-generated data: 4 / label: PushData
-trying to concretize/convert generated data. /target type: java.lang.Double/converter: default
-default converter from java.lang.Integer to java.lang.Double is found
-SUT method push is executed
-
-method is found as isEmpty in SUT
-SUT method isEmpty is executed
-same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
-output data from SUT is: false
-
-method is found as pop in SUT
-SUT method pop is executed
-trying to make output data abstract. /from java.lang.Double to java.lang.Integer/converter: default
-default converter from java.lang.Double to java.lang.Integer is found
-output data from SUT is: 4
-
-method is found as isEmpty in SUT
-SUT method isEmpty is executed
-same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
-output data from SUT is: false
-
-method is found as pop in SUT
-SUT method pop is executed
-trying to make output data abstract. /from java.lang.Double to java.lang.Integer/converter: default
-default converter from java.lang.Double to java.lang.Integer is found
-output data from SUT is: 5
-
-method is found as isEmpty in SUT
-SUT method isEmpty is executed
-same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
-output data from SUT is: true
-
-method is found as push in SUT
-trying to generate abstract data. /label: PushData/target order: 0/type: java.lang.Integer/generator: default
-default generator for class java.lang.Integer is found
-generated data: 0 / label: PushData
-trying to concretize/convert generated data. /target type: java.lang.Double/converter: default
-default converter from java.lang.Integer to java.lang.Double is found
-SUT method push is executed
-
-method is found as isEmpty in SUT
-SUT method isEmpty is executed
-same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
-output data from SUT is: false
-
-method is found as pop in SUT
-SUT method pop is executed
-trying to make output data abstract. /from java.lang.Double to java.lang.Integer/converter: default
-default converter from java.lang.Double to java.lang.Integer is found
-output data from SUT is: 0
-
-method is found as isEmpty in SUT
-SUT method isEmpty is executed
-same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
-output data from SUT is: true
-
-method is found as push in SUT
-trying to generate abstract data. /label: PushData/target order: 0/type: java.lang.Integer/generator: default
-default generator for class java.lang.Integer is found
-generated data: 9 / label: PushData
-trying to concretize/convert generated data. /target type: java.lang.Double/converter: default
-default converter from java.lang.Integer to java.lang.Double is found
-SUT method push is executed
-
-method is found as isEmpty in SUT
-SUT method isEmpty is executed
-same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
-output data from SUT is: false
-
-method is found as push in SUT
-trying to generate abstract data. /label: PushData/target order: 0/type: java.lang.Integer/generator: default
-default generator for class java.lang.Integer is found
-generated data: 5 / label: PushData
-trying to concretize/convert generated data. /target type: java.lang.Double/converter: default
-default converter from java.lang.Integer to java.lang.Double is found
-SUT method push is executed
-
-method is found as isEmpty in SUT
-SUT method isEmpty is executed
-same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
-output data from SUT is: false
-
-method is found as pop in SUT
-SUT method pop is executed
-trying to make output data abstract. /from java.lang.Double to java.lang.Integer/converter: default
-default converter from java.lang.Double to java.lang.Integer is found
-output data from SUT is: 5
-
-method is found as isEmpty in SUT
-SUT method isEmpty is executed
-same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
-output data from SUT is: false
-
-method is found as pop in SUT
-SUT method pop is executed
-trying to make output data abstract. /from java.lang.Double to java.lang.Integer/converter: default
-default converter from java.lang.Double to java.lang.Integer is found
-output data from SUT is: 9
-
-method is found as isEmpty in SUT
-SUT method isEmpty is executed
-same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
-output data from SUT is: true
-
-method is found as push in SUT
-trying to generate abstract data. /label: PushData/target order: 0/type: java.lang.Integer/generator: default
-default generator for class java.lang.Integer is found
-generated data: 5 / label: PushData
-trying to concretize/convert generated data. /target type: java.lang.Double/converter: default
-default converter from java.lang.Integer to java.lang.Double is found
-SUT method push is executed
-
-method is found as isEmpty in SUT
-SUT method isEmpty is executed
-same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
-output data from SUT is: false
-
-method is found as pop in SUT
-SUT method pop is executed
-trying to make output data abstract. /from java.lang.Double to java.lang.Integer/converter: default
-default converter from java.lang.Double to java.lang.Integer is found
-output data from SUT is: 5
-
-method is found as isEmpty in SUT
-SUT method isEmpty is executed
-same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
-output data from SUT is: true
-
-method is found as push in SUT
-trying to generate abstract data. /label: PushData/target order: 0/type: java.lang.Integer/generator: default
-default generator for class java.lang.Integer is found
-generated data: 0 / label: PushData
-trying to concretize/convert generated data. /target type: java.lang.Double/converter: default
-default converter from java.lang.Integer to java.lang.Double is found
-SUT method push is executed
-
-method is found as isEmpty in SUT
-SUT method isEmpty is executed
-same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
-output data from SUT is: false
-
-method is found as pop in SUT
-SUT method pop is executed
-trying to make output data abstract. /from java.lang.Double to java.lang.Integer/converter: default
-default converter from java.lang.Double to java.lang.Integer is found
-output data from SUT is: 0
-
-method is found as isEmpty in SUT
-SUT method isEmpty is executed
-same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
-output data from SUT is: true
-
-method is found as push in SUT
-trying to generate abstract data. /label: PushData/target order: 0/type: java.lang.Integer/generator: default
-default generator for class java.lang.Integer is found
-generated data: 6 / label: PushData
-trying to concretize/convert generated data. /target type: java.lang.Double/converter: default
-default converter from java.lang.Integer to java.lang.Double is found
-SUT method push is executed
-
-method is found as isEmpty in SUT
-SUT method isEmpty is executed
-same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
-output data from SUT is: false
-
-method is found as pop in SUT
-SUT method pop is executed
-trying to make output data abstract. /from java.lang.Double to java.lang.Integer/converter: default
-default converter from java.lang.Double to java.lang.Integer is found
-output data from SUT is: 6
-
-method is found as isEmpty in SUT
-SUT method isEmpty is executed
-same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
-output data from SUT is: true
-
-method is found as push in SUT
-trying to generate abstract data. /label: PushData/target order: 0/type: java.lang.Integer/generator: default
-default generator for class java.lang.Integer is found
-generated data: 5 / label: PushData
-trying to concretize/convert generated data. /target type: java.lang.Double/converter: default
-default converter from java.lang.Integer to java.lang.Double is found
-SUT method push is executed
-
-method is found as isEmpty in SUT
-SUT method isEmpty is executed
-same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
-output data from SUT is: false
-
-method is found as pop in SUT
-SUT method pop is executed
-trying to make output data abstract. /from java.lang.Double to java.lang.Integer/converter: default
-default converter from java.lang.Double to java.lang.Integer is found
-output data from SUT is: 5
-
-method is found as isEmpty in SUT
-SUT method isEmpty is executed
-same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
-output data from SUT is: true
-
-method is found as push in SUT
-trying to generate abstract data. /label: PushData/target order: 0/type: java.lang.Integer/generator: default
-default generator for class java.lang.Integer is found
-generated data: 10 / label: PushData
-trying to concretize/convert generated data. /target type: java.lang.Double/converter: default
-default converter from java.lang.Integer to java.lang.Double is found
-SUT method push is executed
-
-method is found as isEmpty in SUT
-SUT method isEmpty is executed
-same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
-output data from SUT is: false
-
-method is found as pop in SUT
-SUT method pop is executed
-trying to make output data abstract. /from java.lang.Double to java.lang.Integer/converter: default
-default converter from java.lang.Double to java.lang.Integer is found
-output data from SUT is: 10
-
-method is found as isEmpty in SUT
-SUT method isEmpty is executed
-same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
-output data from SUT is: true
-
-method is found as push in SUT
-trying to generate abstract data. /label: PushData/target order: 0/type: java.lang.Integer/generator: default
-default generator for class java.lang.Integer is found
-generated data: 1 / label: PushData
-trying to concretize/convert generated data. /target type: java.lang.Double/converter: default
-default converter from java.lang.Integer to java.lang.Double is found
-SUT method push is executed
-
-method is found as isEmpty in SUT
-SUT method isEmpty is executed
-same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
-output data from SUT is: false
-
-method is found as pop in SUT
-SUT method pop is executed
-trying to make output data abstract. /from java.lang.Double to java.lang.Integer/converter: default
-default converter from java.lang.Double to java.lang.Integer is found
-output data from SUT is: 1
-
-method is found as isEmpty in SUT
-SUT method isEmpty is executed
-same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
-output data from SUT is: true
-
-method is found as push in SUT
-trying to generate abstract data. /label: PushData/target order: 0/type: java.lang.Integer/generator: default
-default generator for class java.lang.Integer is found
-generated data: 6 / label: PushData
-trying to concretize/convert generated data. /target type: java.lang.Double/converter: default
-default converter from java.lang.Integer to java.lang.Double is found
-SUT method push is executed
-
-method is found as isEmpty in SUT
-SUT method isEmpty is executed
-same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
-output data from SUT is: false
-
-method is found as push in SUT
-trying to generate abstract data. /label: PushData/target order: 0/type: java.lang.Integer/generator: default
-default generator for class java.lang.Integer is found
 generated data: 7 / label: PushData
 trying to concretize/convert generated data. /target type: java.lang.Double/converter: default
 default converter from java.lang.Integer to java.lang.Double is found
@@ -783,23 +386,12 @@ output data from SUT is: 7
 method is found as isEmpty in SUT
 SUT method isEmpty is executed
 same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
-output data from SUT is: false
-
-method is found as pop in SUT
-SUT method pop is executed
-trying to make output data abstract. /from java.lang.Double to java.lang.Integer/converter: default
-default converter from java.lang.Double to java.lang.Integer is found
-output data from SUT is: 6
-
-method is found as isEmpty in SUT
-SUT method isEmpty is executed
-same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
 output data from SUT is: true
 
 method is found as push in SUT
 trying to generate abstract data. /label: PushData/target order: 0/type: java.lang.Integer/generator: default
 default generator for class java.lang.Integer is found
-generated data: 9 / label: PushData
+generated data: 0 / label: PushData
 trying to concretize/convert generated data. /target type: java.lang.Double/converter: default
 default converter from java.lang.Integer to java.lang.Double is found
 SUT method push is executed
@@ -808,6 +400,41 @@ method is found as isEmpty in SUT
 SUT method isEmpty is executed
 same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
 output data from SUT is: false
+
+method is found as push in SUT
+trying to generate abstract data. /label: PushData/target order: 0/type: java.lang.Integer/generator: default
+default generator for class java.lang.Integer is found
+generated data: 5 / label: PushData
+trying to concretize/convert generated data. /target type: java.lang.Double/converter: default
+default converter from java.lang.Integer to java.lang.Double is found
+SUT method push is executed
+
+method is found as isEmpty in SUT
+SUT method isEmpty is executed
+same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
+output data from SUT is: false
+
+method is found as pop in SUT
+SUT method pop is executed
+trying to make output data abstract. /from java.lang.Double to java.lang.Integer/converter: default
+default converter from java.lang.Double to java.lang.Integer is found
+output data from SUT is: 5
+
+method is found as isEmpty in SUT
+SUT method isEmpty is executed
+same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
+output data from SUT is: false
+
+method is found as pop in SUT
+SUT method pop is executed
+trying to make output data abstract. /from java.lang.Double to java.lang.Integer/converter: default
+default converter from java.lang.Double to java.lang.Integer is found
+output data from SUT is: 0
+
+method is found as isEmpty in SUT
+SUT method isEmpty is executed
+same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
+output data from SUT is: true
 
 method is found as push in SUT
 trying to generate abstract data. /label: PushData/target order: 0/type: java.lang.Integer/generator: default
@@ -821,292 +448,6 @@ method is found as isEmpty in SUT
 SUT method isEmpty is executed
 same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
 output data from SUT is: false
-
-method is found as pop in SUT
-SUT method pop is executed
-trying to make output data abstract. /from java.lang.Double to java.lang.Integer/converter: default
-default converter from java.lang.Double to java.lang.Integer is found
-output data from SUT is: 7
-
-method is found as isEmpty in SUT
-SUT method isEmpty is executed
-same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
-output data from SUT is: false
-
-method is found as push in SUT
-trying to generate abstract data. /label: PushData/target order: 0/type: java.lang.Integer/generator: default
-default generator for class java.lang.Integer is found
-generated data: 10 / label: PushData
-trying to concretize/convert generated data. /target type: java.lang.Double/converter: default
-default converter from java.lang.Integer to java.lang.Double is found
-SUT method push is executed
-
-method is found as isEmpty in SUT
-SUT method isEmpty is executed
-same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
-output data from SUT is: false
-
-method is found as pop in SUT
-SUT method pop is executed
-trying to make output data abstract. /from java.lang.Double to java.lang.Integer/converter: default
-default converter from java.lang.Double to java.lang.Integer is found
-output data from SUT is: 10
-
-method is found as isEmpty in SUT
-SUT method isEmpty is executed
-same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
-output data from SUT is: false
-
-method is found as push in SUT
-trying to generate abstract data. /label: PushData/target order: 0/type: java.lang.Integer/generator: default
-default generator for class java.lang.Integer is found
-generated data: 6 / label: PushData
-trying to concretize/convert generated data. /target type: java.lang.Double/converter: default
-default converter from java.lang.Integer to java.lang.Double is found
-SUT method push is executed
-
-method is found as isEmpty in SUT
-SUT method isEmpty is executed
-same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
-output data from SUT is: false
-
-method is found as pop in SUT
-SUT method pop is executed
-trying to make output data abstract. /from java.lang.Double to java.lang.Integer/converter: default
-default converter from java.lang.Double to java.lang.Integer is found
-output data from SUT is: 6
-
-method is found as isEmpty in SUT
-SUT method isEmpty is executed
-same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
-output data from SUT is: false
-
-method is found as push in SUT
-trying to generate abstract data. /label: PushData/target order: 0/type: java.lang.Integer/generator: default
-default generator for class java.lang.Integer is found
-generated data: 2 / label: PushData
-trying to concretize/convert generated data. /target type: java.lang.Double/converter: default
-default converter from java.lang.Integer to java.lang.Double is found
-SUT method push is executed
-
-method is found as isEmpty in SUT
-SUT method isEmpty is executed
-same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
-output data from SUT is: false
-
-method is found as pop in SUT
-SUT method pop is executed
-trying to make output data abstract. /from java.lang.Double to java.lang.Integer/converter: default
-default converter from java.lang.Double to java.lang.Integer is found
-output data from SUT is: 2
-
-method is found as isEmpty in SUT
-SUT method isEmpty is executed
-same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
-output data from SUT is: false
-
-method is found as push in SUT
-trying to generate abstract data. /label: PushData/target order: 0/type: java.lang.Integer/generator: default
-default generator for class java.lang.Integer is found
-generated data: 9 / label: PushData
-trying to concretize/convert generated data. /target type: java.lang.Double/converter: default
-default converter from java.lang.Integer to java.lang.Double is found
-SUT method push is executed
-
-method is found as isEmpty in SUT
-SUT method isEmpty is executed
-same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
-output data from SUT is: false
-
-method is found as pop in SUT
-SUT method pop is executed
-trying to make output data abstract. /from java.lang.Double to java.lang.Integer/converter: default
-default converter from java.lang.Double to java.lang.Integer is found
-output data from SUT is: 9
-
-method is found as isEmpty in SUT
-SUT method isEmpty is executed
-same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
-output data from SUT is: false
-
-method is found as push in SUT
-trying to generate abstract data. /label: PushData/target order: 0/type: java.lang.Integer/generator: default
-default generator for class java.lang.Integer is found
-generated data: 2 / label: PushData
-trying to concretize/convert generated data. /target type: java.lang.Double/converter: default
-default converter from java.lang.Integer to java.lang.Double is found
-SUT method push is executed
-
-method is found as isEmpty in SUT
-SUT method isEmpty is executed
-same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
-output data from SUT is: false
-
-method is found as pop in SUT
-SUT method pop is executed
-trying to make output data abstract. /from java.lang.Double to java.lang.Integer/converter: default
-default converter from java.lang.Double to java.lang.Integer is found
-output data from SUT is: 2
-
-method is found as isEmpty in SUT
-SUT method isEmpty is executed
-same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
-output data from SUT is: false
-
-method is found as push in SUT
-trying to generate abstract data. /label: PushData/target order: 0/type: java.lang.Integer/generator: default
-default generator for class java.lang.Integer is found
-generated data: 8 / label: PushData
-trying to concretize/convert generated data. /target type: java.lang.Double/converter: default
-default converter from java.lang.Integer to java.lang.Double is found
-SUT method push is executed
-
-method is found as isEmpty in SUT
-SUT method isEmpty is executed
-same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
-output data from SUT is: false
-
-method is found as pop in SUT
-SUT method pop is executed
-trying to make output data abstract. /from java.lang.Double to java.lang.Integer/converter: default
-default converter from java.lang.Double to java.lang.Integer is found
-output data from SUT is: 8
-
-method is found as isEmpty in SUT
-SUT method isEmpty is executed
-same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
-output data from SUT is: false
-
-method is found as push in SUT
-trying to generate abstract data. /label: PushData/target order: 0/type: java.lang.Integer/generator: default
-default generator for class java.lang.Integer is found
-generated data: 1 / label: PushData
-trying to concretize/convert generated data. /target type: java.lang.Double/converter: default
-default converter from java.lang.Integer to java.lang.Double is found
-SUT method push is executed
-
-method is found as isEmpty in SUT
-SUT method isEmpty is executed
-same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
-output data from SUT is: false
-
-method is found as pop in SUT
-SUT method pop is executed
-trying to make output data abstract. /from java.lang.Double to java.lang.Integer/converter: default
-default converter from java.lang.Double to java.lang.Integer is found
-output data from SUT is: 1
-
-method is found as isEmpty in SUT
-SUT method isEmpty is executed
-same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
-output data from SUT is: false
-
-method is found as pop in SUT
-SUT method pop is executed
-trying to make output data abstract. /from java.lang.Double to java.lang.Integer/converter: default
-default converter from java.lang.Double to java.lang.Integer is found
-output data from SUT is: 9
-
-method is found as isEmpty in SUT
-SUT method isEmpty is executed
-same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
-output data from SUT is: true
-
-method is found as push in SUT
-trying to generate abstract data. /label: PushData/target order: 0/type: java.lang.Integer/generator: default
-default generator for class java.lang.Integer is found
-generated data: 9 / label: PushData
-trying to concretize/convert generated data. /target type: java.lang.Double/converter: default
-default converter from java.lang.Integer to java.lang.Double is found
-SUT method push is executed
-
-method is found as isEmpty in SUT
-SUT method isEmpty is executed
-same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
-output data from SUT is: false
-
-method is found as push in SUT
-trying to generate abstract data. /label: PushData/target order: 0/type: java.lang.Integer/generator: default
-default generator for class java.lang.Integer is found
-generated data: 5 / label: PushData
-trying to concretize/convert generated data. /target type: java.lang.Double/converter: default
-default converter from java.lang.Integer to java.lang.Double is found
-SUT method push is executed
-
-method is found as isEmpty in SUT
-SUT method isEmpty is executed
-same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
-output data from SUT is: false
-
-method is found as pop in SUT
-SUT method pop is executed
-trying to make output data abstract. /from java.lang.Double to java.lang.Integer/converter: default
-default converter from java.lang.Double to java.lang.Integer is found
-output data from SUT is: 5
-
-method is found as isEmpty in SUT
-SUT method isEmpty is executed
-same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
-output data from SUT is: false
-
-method is found as pop in SUT
-SUT method pop is executed
-trying to make output data abstract. /from java.lang.Double to java.lang.Integer/converter: default
-default converter from java.lang.Double to java.lang.Integer is found
-output data from SUT is: 9
-
-method is found as isEmpty in SUT
-SUT method isEmpty is executed
-same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
-output data from SUT is: true
-
-method is found as push in SUT
-trying to generate abstract data. /label: PushData/target order: 0/type: java.lang.Integer/generator: default
-default generator for class java.lang.Integer is found
-generated data: 5 / label: PushData
-trying to concretize/convert generated data. /target type: java.lang.Double/converter: default
-default converter from java.lang.Integer to java.lang.Double is found
-SUT method push is executed
-
-method is found as isEmpty in SUT
-SUT method isEmpty is executed
-same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
-output data from SUT is: false
-
-method is found as pop in SUT
-SUT method pop is executed
-trying to make output data abstract. /from java.lang.Double to java.lang.Integer/converter: default
-default converter from java.lang.Double to java.lang.Integer is found
-output data from SUT is: 5
-
-method is found as isEmpty in SUT
-SUT method isEmpty is executed
-same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
-output data from SUT is: true
-
-method is found as push in SUT
-trying to generate abstract data. /label: PushData/target order: 0/type: java.lang.Integer/generator: default
-default generator for class java.lang.Integer is found
-generated data: 8 / label: PushData
-trying to concretize/convert generated data. /target type: java.lang.Double/converter: default
-default converter from java.lang.Integer to java.lang.Double is found
-SUT method push is executed
-
-method is found as isEmpty in SUT
-SUT method isEmpty is executed
-same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
-output data from SUT is: false
-
-method is found as pop in SUT
-SUT method pop is executed
-trying to make output data abstract. /from java.lang.Double to java.lang.Integer/converter: default
-default converter from java.lang.Double to java.lang.Integer is found
-output data from SUT is: 8
-
-method is found as isEmpty in SUT
-SUT method isEmpty is executed
-same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
-output data from SUT is: true
 
 method is found as push in SUT
 trying to generate abstract data. /label: PushData/target order: 0/type: java.lang.Integer/generator: default
@@ -1145,6 +486,551 @@ SUT method isEmpty is executed
 same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
 output data from SUT is: false
 
+method is found as pop in SUT
+SUT method pop is executed
+trying to make output data abstract. /from java.lang.Double to java.lang.Integer/converter: default
+default converter from java.lang.Double to java.lang.Integer is found
+output data from SUT is: 9
+
+method is found as isEmpty in SUT
+SUT method isEmpty is executed
+same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
+output data from SUT is: false
+
+method is found as pop in SUT
+SUT method pop is executed
+trying to make output data abstract. /from java.lang.Double to java.lang.Integer/converter: default
+default converter from java.lang.Double to java.lang.Integer is found
+output data from SUT is: 7
+
+method is found as isEmpty in SUT
+SUT method isEmpty is executed
+same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
+output data from SUT is: true
+
+method is found as push in SUT
+trying to generate abstract data. /label: PushData/target order: 0/type: java.lang.Integer/generator: default
+default generator for class java.lang.Integer is found
+generated data: 5 / label: PushData
+trying to concretize/convert generated data. /target type: java.lang.Double/converter: default
+default converter from java.lang.Integer to java.lang.Double is found
+SUT method push is executed
+
+method is found as isEmpty in SUT
+SUT method isEmpty is executed
+same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
+output data from SUT is: false
+
+method is found as push in SUT
+trying to generate abstract data. /label: PushData/target order: 0/type: java.lang.Integer/generator: default
+default generator for class java.lang.Integer is found
+generated data: 2 / label: PushData
+trying to concretize/convert generated data. /target type: java.lang.Double/converter: default
+default converter from java.lang.Integer to java.lang.Double is found
+SUT method push is executed
+
+method is found as isEmpty in SUT
+SUT method isEmpty is executed
+same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
+output data from SUT is: false
+
+method is found as push in SUT
+trying to generate abstract data. /label: PushData/target order: 0/type: java.lang.Integer/generator: default
+default generator for class java.lang.Integer is found
+generated data: 10 / label: PushData
+trying to concretize/convert generated data. /target type: java.lang.Double/converter: default
+default converter from java.lang.Integer to java.lang.Double is found
+SUT method push is executed
+
+method is found as isEmpty in SUT
+SUT method isEmpty is executed
+same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
+output data from SUT is: false
+
+method is found as pop in SUT
+SUT method pop is executed
+trying to make output data abstract. /from java.lang.Double to java.lang.Integer/converter: default
+default converter from java.lang.Double to java.lang.Integer is found
+output data from SUT is: 10
+
+method is found as isEmpty in SUT
+SUT method isEmpty is executed
+same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
+output data from SUT is: false
+
+method is found as pop in SUT
+SUT method pop is executed
+trying to make output data abstract. /from java.lang.Double to java.lang.Integer/converter: default
+default converter from java.lang.Double to java.lang.Integer is found
+output data from SUT is: 2
+
+method is found as isEmpty in SUT
+SUT method isEmpty is executed
+same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
+output data from SUT is: false
+
+method is found as push in SUT
+trying to generate abstract data. /label: PushData/target order: 0/type: java.lang.Integer/generator: default
+default generator for class java.lang.Integer is found
+generated data: 4 / label: PushData
+trying to concretize/convert generated data. /target type: java.lang.Double/converter: default
+default converter from java.lang.Integer to java.lang.Double is found
+SUT method push is executed
+
+method is found as isEmpty in SUT
+SUT method isEmpty is executed
+same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
+output data from SUT is: false
+
+method is found as push in SUT
+trying to generate abstract data. /label: PushData/target order: 0/type: java.lang.Integer/generator: default
+default generator for class java.lang.Integer is found
+generated data: 4 / label: PushData
+trying to concretize/convert generated data. /target type: java.lang.Double/converter: default
+default converter from java.lang.Integer to java.lang.Double is found
+SUT method push is executed
+
+method is found as isEmpty in SUT
+SUT method isEmpty is executed
+same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
+output data from SUT is: false
+
+method is found as pop in SUT
+SUT method pop is executed
+trying to make output data abstract. /from java.lang.Double to java.lang.Integer/converter: default
+default converter from java.lang.Double to java.lang.Integer is found
+output data from SUT is: 4
+
+method is found as isEmpty in SUT
+SUT method isEmpty is executed
+same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
+output data from SUT is: false
+
+method is found as pop in SUT
+SUT method pop is executed
+trying to make output data abstract. /from java.lang.Double to java.lang.Integer/converter: default
+default converter from java.lang.Double to java.lang.Integer is found
+output data from SUT is: 4
+
+method is found as isEmpty in SUT
+SUT method isEmpty is executed
+same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
+output data from SUT is: false
+
+method is found as pop in SUT
+SUT method pop is executed
+trying to make output data abstract. /from java.lang.Double to java.lang.Integer/converter: default
+default converter from java.lang.Double to java.lang.Integer is found
+output data from SUT is: 5
+
+method is found as isEmpty in SUT
+SUT method isEmpty is executed
+same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
+output data from SUT is: true
+
+method is found as push in SUT
+trying to generate abstract data. /label: PushData/target order: 0/type: java.lang.Integer/generator: default
+default generator for class java.lang.Integer is found
+generated data: 8 / label: PushData
+trying to concretize/convert generated data. /target type: java.lang.Double/converter: default
+default converter from java.lang.Integer to java.lang.Double is found
+SUT method push is executed
+
+method is found as isEmpty in SUT
+SUT method isEmpty is executed
+same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
+output data from SUT is: false
+
+
+
+Tescase number:4
+
+method is found as push in SUT
+trying to generate abstract data. /label: PushData/target order: 0/type: java.lang.Integer/generator: default
+default generator for class java.lang.Integer is found
+generated data: 2 / label: PushData
+trying to concretize/convert generated data. /target type: java.lang.Double/converter: default
+default converter from java.lang.Integer to java.lang.Double is found
+SUT method push is executed
+
+method is found as isEmpty in SUT
+SUT method isEmpty is executed
+same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
+output data from SUT is: false
+
+method is found as pop in SUT
+SUT method pop is executed
+trying to make output data abstract. /from java.lang.Double to java.lang.Integer/converter: default
+default converter from java.lang.Double to java.lang.Integer is found
+output data from SUT is: 2
+
+method is found as isEmpty in SUT
+SUT method isEmpty is executed
+same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
+output data from SUT is: true
+
+method is found as push in SUT
+trying to generate abstract data. /label: PushData/target order: 0/type: java.lang.Integer/generator: default
+default generator for class java.lang.Integer is found
+generated data: 7 / label: PushData
+trying to concretize/convert generated data. /target type: java.lang.Double/converter: default
+default converter from java.lang.Integer to java.lang.Double is found
+SUT method push is executed
+
+method is found as isEmpty in SUT
+SUT method isEmpty is executed
+same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
+output data from SUT is: false
+
+method is found as pop in SUT
+SUT method pop is executed
+trying to make output data abstract. /from java.lang.Double to java.lang.Integer/converter: default
+default converter from java.lang.Double to java.lang.Integer is found
+output data from SUT is: 7
+
+method is found as isEmpty in SUT
+SUT method isEmpty is executed
+same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
+output data from SUT is: true
+
+method is found as push in SUT
+trying to generate abstract data. /label: PushData/target order: 0/type: java.lang.Integer/generator: default
+default generator for class java.lang.Integer is found
+generated data: 6 / label: PushData
+trying to concretize/convert generated data. /target type: java.lang.Double/converter: default
+default converter from java.lang.Integer to java.lang.Double is found
+SUT method push is executed
+
+method is found as isEmpty in SUT
+SUT method isEmpty is executed
+same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
+output data from SUT is: false
+
+method is found as pop in SUT
+SUT method pop is executed
+trying to make output data abstract. /from java.lang.Double to java.lang.Integer/converter: default
+default converter from java.lang.Double to java.lang.Integer is found
+output data from SUT is: 6
+
+method is found as isEmpty in SUT
+SUT method isEmpty is executed
+same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
+output data from SUT is: true
+
+method is found as push in SUT
+trying to generate abstract data. /label: PushData/target order: 0/type: java.lang.Integer/generator: default
+default generator for class java.lang.Integer is found
+generated data: 9 / label: PushData
+trying to concretize/convert generated data. /target type: java.lang.Double/converter: default
+default converter from java.lang.Integer to java.lang.Double is found
+SUT method push is executed
+
+method is found as isEmpty in SUT
+SUT method isEmpty is executed
+same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
+output data from SUT is: false
+
+method is found as pop in SUT
+SUT method pop is executed
+trying to make output data abstract. /from java.lang.Double to java.lang.Integer/converter: default
+default converter from java.lang.Double to java.lang.Integer is found
+output data from SUT is: 9
+
+method is found as isEmpty in SUT
+SUT method isEmpty is executed
+same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
+output data from SUT is: true
+
+method is found as push in SUT
+trying to generate abstract data. /label: PushData/target order: 0/type: java.lang.Integer/generator: default
+default generator for class java.lang.Integer is found
+generated data: 3 / label: PushData
+trying to concretize/convert generated data. /target type: java.lang.Double/converter: default
+default converter from java.lang.Integer to java.lang.Double is found
+SUT method push is executed
+
+method is found as isEmpty in SUT
+SUT method isEmpty is executed
+same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
+output data from SUT is: false
+
+method is found as pop in SUT
+SUT method pop is executed
+trying to make output data abstract. /from java.lang.Double to java.lang.Integer/converter: default
+default converter from java.lang.Double to java.lang.Integer is found
+output data from SUT is: 3
+
+method is found as isEmpty in SUT
+SUT method isEmpty is executed
+same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
+output data from SUT is: true
+
+method is found as push in SUT
+trying to generate abstract data. /label: PushData/target order: 0/type: java.lang.Integer/generator: default
+default generator for class java.lang.Integer is found
+generated data: 0 / label: PushData
+trying to concretize/convert generated data. /target type: java.lang.Double/converter: default
+default converter from java.lang.Integer to java.lang.Double is found
+SUT method push is executed
+
+method is found as isEmpty in SUT
+SUT method isEmpty is executed
+same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
+output data from SUT is: false
+
+method is found as push in SUT
+trying to generate abstract data. /label: PushData/target order: 0/type: java.lang.Integer/generator: default
+default generator for class java.lang.Integer is found
+generated data: 1 / label: PushData
+trying to concretize/convert generated data. /target type: java.lang.Double/converter: default
+default converter from java.lang.Integer to java.lang.Double is found
+SUT method push is executed
+
+method is found as isEmpty in SUT
+SUT method isEmpty is executed
+same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
+output data from SUT is: false
+
+method is found as push in SUT
+trying to generate abstract data. /label: PushData/target order: 0/type: java.lang.Integer/generator: default
+default generator for class java.lang.Integer is found
+generated data: 8 / label: PushData
+trying to concretize/convert generated data. /target type: java.lang.Double/converter: default
+default converter from java.lang.Integer to java.lang.Double is found
+SUT method push is executed
+
+method is found as isEmpty in SUT
+SUT method isEmpty is executed
+same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
+output data from SUT is: false
+
+method is found as pop in SUT
+SUT method pop is executed
+trying to make output data abstract. /from java.lang.Double to java.lang.Integer/converter: default
+default converter from java.lang.Double to java.lang.Integer is found
+output data from SUT is: 8
+
+method is found as isEmpty in SUT
+SUT method isEmpty is executed
+same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
+output data from SUT is: false
+
+method is found as pop in SUT
+SUT method pop is executed
+trying to make output data abstract. /from java.lang.Double to java.lang.Integer/converter: default
+default converter from java.lang.Double to java.lang.Integer is found
+output data from SUT is: 1
+
+method is found as isEmpty in SUT
+SUT method isEmpty is executed
+same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
+output data from SUT is: false
+
+method is found as push in SUT
+trying to generate abstract data. /label: PushData/target order: 0/type: java.lang.Integer/generator: default
+default generator for class java.lang.Integer is found
+generated data: 1 / label: PushData
+trying to concretize/convert generated data. /target type: java.lang.Double/converter: default
+default converter from java.lang.Integer to java.lang.Double is found
+SUT method push is executed
+
+method is found as isEmpty in SUT
+SUT method isEmpty is executed
+same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
+output data from SUT is: false
+
+method is found as push in SUT
+trying to generate abstract data. /label: PushData/target order: 0/type: java.lang.Integer/generator: default
+default generator for class java.lang.Integer is found
+generated data: 10 / label: PushData
+trying to concretize/convert generated data. /target type: java.lang.Double/converter: default
+default converter from java.lang.Integer to java.lang.Double is found
+SUT method push is executed
+
+method is found as isEmpty in SUT
+SUT method isEmpty is executed
+same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
+output data from SUT is: false
+
+method is found as pop in SUT
+SUT method pop is executed
+trying to make output data abstract. /from java.lang.Double to java.lang.Integer/converter: default
+default converter from java.lang.Double to java.lang.Integer is found
+output data from SUT is: 10
+
+method is found as isEmpty in SUT
+SUT method isEmpty is executed
+same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
+output data from SUT is: false
+
+method is found as push in SUT
+trying to generate abstract data. /label: PushData/target order: 0/type: java.lang.Integer/generator: default
+default generator for class java.lang.Integer is found
+generated data: 6 / label: PushData
+trying to concretize/convert generated data. /target type: java.lang.Double/converter: default
+default converter from java.lang.Integer to java.lang.Double is found
+SUT method push is executed
+
+method is found as isEmpty in SUT
+SUT method isEmpty is executed
+same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
+output data from SUT is: false
+
+method is found as pop in SUT
+SUT method pop is executed
+trying to make output data abstract. /from java.lang.Double to java.lang.Integer/converter: default
+default converter from java.lang.Double to java.lang.Integer is found
+output data from SUT is: 6
+
+method is found as isEmpty in SUT
+SUT method isEmpty is executed
+same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
+output data from SUT is: false
+
+method is found as pop in SUT
+SUT method pop is executed
+trying to make output data abstract. /from java.lang.Double to java.lang.Integer/converter: default
+default converter from java.lang.Double to java.lang.Integer is found
+output data from SUT is: 1
+
+method is found as isEmpty in SUT
+SUT method isEmpty is executed
+same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
+output data from SUT is: false
+
+method is found as pop in SUT
+SUT method pop is executed
+trying to make output data abstract. /from java.lang.Double to java.lang.Integer/converter: default
+default converter from java.lang.Double to java.lang.Integer is found
+output data from SUT is: 0
+
+method is found as isEmpty in SUT
+SUT method isEmpty is executed
+same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
+output data from SUT is: true
+
+method is found as push in SUT
+trying to generate abstract data. /label: PushData/target order: 0/type: java.lang.Integer/generator: default
+default generator for class java.lang.Integer is found
+generated data: 1 / label: PushData
+trying to concretize/convert generated data. /target type: java.lang.Double/converter: default
+default converter from java.lang.Integer to java.lang.Double is found
+SUT method push is executed
+
+method is found as isEmpty in SUT
+SUT method isEmpty is executed
+same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
+output data from SUT is: false
+
+method is found as pop in SUT
+SUT method pop is executed
+trying to make output data abstract. /from java.lang.Double to java.lang.Integer/converter: default
+default converter from java.lang.Double to java.lang.Integer is found
+output data from SUT is: 1
+
+method is found as isEmpty in SUT
+SUT method isEmpty is executed
+same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
+output data from SUT is: true
+
+method is found as push in SUT
+trying to generate abstract data. /label: PushData/target order: 0/type: java.lang.Integer/generator: default
+default generator for class java.lang.Integer is found
+generated data: 10 / label: PushData
+trying to concretize/convert generated data. /target type: java.lang.Double/converter: default
+default converter from java.lang.Integer to java.lang.Double is found
+SUT method push is executed
+
+method is found as isEmpty in SUT
+SUT method isEmpty is executed
+same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
+output data from SUT is: false
+
+method is found as push in SUT
+trying to generate abstract data. /label: PushData/target order: 0/type: java.lang.Integer/generator: default
+default generator for class java.lang.Integer is found
+generated data: 4 / label: PushData
+trying to concretize/convert generated data. /target type: java.lang.Double/converter: default
+default converter from java.lang.Integer to java.lang.Double is found
+SUT method push is executed
+
+method is found as isEmpty in SUT
+SUT method isEmpty is executed
+same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
+output data from SUT is: false
+
+method is found as pop in SUT
+SUT method pop is executed
+trying to make output data abstract. /from java.lang.Double to java.lang.Integer/converter: default
+default converter from java.lang.Double to java.lang.Integer is found
+output data from SUT is: 4
+
+method is found as isEmpty in SUT
+SUT method isEmpty is executed
+same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
+output data from SUT is: false
+
+method is found as push in SUT
+trying to generate abstract data. /label: PushData/target order: 0/type: java.lang.Integer/generator: default
+default generator for class java.lang.Integer is found
+generated data: 6 / label: PushData
+trying to concretize/convert generated data. /target type: java.lang.Double/converter: default
+default converter from java.lang.Integer to java.lang.Double is found
+SUT method push is executed
+
+method is found as isEmpty in SUT
+SUT method isEmpty is executed
+same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
+output data from SUT is: false
+
+method is found as pop in SUT
+SUT method pop is executed
+trying to make output data abstract. /from java.lang.Double to java.lang.Integer/converter: default
+default converter from java.lang.Double to java.lang.Integer is found
+output data from SUT is: 6
+
+method is found as isEmpty in SUT
+SUT method isEmpty is executed
+same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
+output data from SUT is: false
+
+method is found as push in SUT
+trying to generate abstract data. /label: PushData/target order: 0/type: java.lang.Integer/generator: default
+default generator for class java.lang.Integer is found
+generated data: 7 / label: PushData
+trying to concretize/convert generated data. /target type: java.lang.Double/converter: default
+default converter from java.lang.Integer to java.lang.Double is found
+SUT method push is executed
+
+method is found as isEmpty in SUT
+SUT method isEmpty is executed
+same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
+output data from SUT is: false
+
+method is found as pop in SUT
+SUT method pop is executed
+trying to make output data abstract. /from java.lang.Double to java.lang.Integer/converter: default
+default converter from java.lang.Double to java.lang.Integer is found
+output data from SUT is: 7
+
+method is found as isEmpty in SUT
+SUT method isEmpty is executed
+same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
+output data from SUT is: false
+
+method is found as push in SUT
+trying to generate abstract data. /label: PushData/target order: 0/type: java.lang.Integer/generator: default
+default generator for class java.lang.Integer is found
+generated data: 8 / label: PushData
+trying to concretize/convert generated data. /target type: java.lang.Double/converter: default
+default converter from java.lang.Integer to java.lang.Double is found
+SUT method push is executed
+
+method is found as isEmpty in SUT
+SUT method isEmpty is executed
+same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
+output data from SUT is: false
+
 method is found as push in SUT
 trying to generate abstract data. /label: PushData/target order: 0/type: java.lang.Integer/generator: default
 default generator for class java.lang.Integer is found
@@ -1169,10 +1055,32 @@ SUT method isEmpty is executed
 same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
 output data from SUT is: false
 
+method is found as pop in SUT
+SUT method pop is executed
+trying to make output data abstract. /from java.lang.Double to java.lang.Integer/converter: default
+default converter from java.lang.Double to java.lang.Integer is found
+output data from SUT is: 8
+
+method is found as isEmpty in SUT
+SUT method isEmpty is executed
+same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
+output data from SUT is: false
+
+method is found as pop in SUT
+SUT method pop is executed
+trying to make output data abstract. /from java.lang.Double to java.lang.Integer/converter: default
+default converter from java.lang.Double to java.lang.Integer is found
+output data from SUT is: 10
+
+method is found as isEmpty in SUT
+SUT method isEmpty is executed
+same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
+output data from SUT is: true
+
 method is found as push in SUT
 trying to generate abstract data. /label: PushData/target order: 0/type: java.lang.Integer/generator: default
 default generator for class java.lang.Integer is found
-generated data: 1 / label: PushData
+generated data: 8 / label: PushData
 trying to concretize/convert generated data. /target type: java.lang.Double/converter: default
 default converter from java.lang.Integer to java.lang.Double is found
 SUT method push is executed
@@ -1181,3 +1089,86 @@ method is found as isEmpty in SUT
 SUT method isEmpty is executed
 same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
 output data from SUT is: false
+
+method is found as push in SUT
+trying to generate abstract data. /label: PushData/target order: 0/type: java.lang.Integer/generator: default
+default generator for class java.lang.Integer is found
+generated data: 5 / label: PushData
+trying to concretize/convert generated data. /target type: java.lang.Double/converter: default
+default converter from java.lang.Integer to java.lang.Double is found
+SUT method push is executed
+
+method is found as isEmpty in SUT
+SUT method isEmpty is executed
+same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
+output data from SUT is: false
+
+method is found as push in SUT
+trying to generate abstract data. /label: PushData/target order: 0/type: java.lang.Integer/generator: default
+default generator for class java.lang.Integer is found
+generated data: 8 / label: PushData
+trying to concretize/convert generated data. /target type: java.lang.Double/converter: default
+default converter from java.lang.Integer to java.lang.Double is found
+SUT method push is executed
+
+method is found as isEmpty in SUT
+SUT method isEmpty is executed
+same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
+output data from SUT is: false
+
+method is found as pop in SUT
+SUT method pop is executed
+trying to make output data abstract. /from java.lang.Double to java.lang.Integer/converter: default
+default converter from java.lang.Double to java.lang.Integer is found
+output data from SUT is: 8
+
+method is found as isEmpty in SUT
+SUT method isEmpty is executed
+same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
+output data from SUT is: false
+
+method is found as pop in SUT
+SUT method pop is executed
+trying to make output data abstract. /from java.lang.Double to java.lang.Integer/converter: default
+default converter from java.lang.Double to java.lang.Integer is found
+output data from SUT is: 5
+
+method is found as isEmpty in SUT
+SUT method isEmpty is executed
+same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
+output data from SUT is: false
+
+method is found as push in SUT
+trying to generate abstract data. /label: PushData/target order: 0/type: java.lang.Integer/generator: default
+default generator for class java.lang.Integer is found
+generated data: 3 / label: PushData
+trying to concretize/convert generated data. /target type: java.lang.Double/converter: default
+default converter from java.lang.Integer to java.lang.Double is found
+SUT method push is executed
+
+method is found as isEmpty in SUT
+SUT method isEmpty is executed
+same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
+output data from SUT is: false
+
+method is found as pop in SUT
+SUT method pop is executed
+trying to make output data abstract. /from java.lang.Double to java.lang.Integer/converter: default
+default converter from java.lang.Double to java.lang.Integer is found
+output data from SUT is: 3
+
+method is found as isEmpty in SUT
+SUT method isEmpty is executed
+same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
+output data from SUT is: false
+
+method is found as pop in SUT
+SUT method pop is executed
+trying to make output data abstract. /from java.lang.Double to java.lang.Integer/converter: default
+default converter from java.lang.Double to java.lang.Integer is found
+output data from SUT is: 8
+
+method is found as isEmpty in SUT
+SUT method isEmpty is executed
+same SUT and abstract output data types, no conversion is specified. /type: java.lang.Boolean
+output data from SUT is: true

@@ -1,7 +1,5 @@
 package hh.mbt.extension.model.CRUDEFSM;
 
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import org.junit.Assert;
 
@@ -24,9 +22,9 @@ public class CRUDEFSM implements FsmModel {
 
 
     
-    private static int NumberOfEntry=0;
+    private static int NumberOfEntry;
     
-    private final int Max = 100;
+    private final int Max = 20;
     
     private static int EntryFromModel;
     
@@ -44,35 +42,12 @@ public class CRUDEFSM implements FsmModel {
     
     private FlightBookingOps CrudOp = new FlightBookingOps();
     
+    final ArrayList<Object> Init = CrudOp.Init();
     final ArrayList<Object> Create = CrudOp.Create();
     final ArrayList<Object> Retrieve = CrudOp.Retrieve();
     final ArrayList<Object> Update = CrudOp.Update();
     final ArrayList<Object> Delete = CrudOp.Delete();
     
-    
-    public CRUDEFSM(){
-    	
-    	//FlightBooking client init
-    	Method m = null;
-		try {
-			m = SUT.getClass().getDeclaredMethod("init");
-		} catch (NoSuchMethodException e) {
-			e.printStackTrace();
-		} catch (SecurityException e) {
-			e.printStackTrace();
-		}
-    	m.setAccessible(true);
-    	try {
-			m.invoke(SUT);
-		} catch (IllegalAccessException e) {
-			e.printStackTrace();
-		} catch (IllegalArgumentException e) {
-			e.printStackTrace();
-		} catch (InvocationTargetException e) {
-			e.printStackTrace();
-		}
-    }
-
     
   
     
@@ -83,6 +58,14 @@ public class CRUDEFSM implements FsmModel {
     
     public void reset(boolean testing) {
     	
+    	NumberOfEntry=0;
+    	
+    	//SUT Init
+    	try {
+			adapter.adapt(Init);
+		} catch (Throwable e) {
+			e.printStackTrace();
+		}   	
   	
 
     }

@@ -9,6 +9,12 @@ import hh.mbt.extension.AbstractOperation;
 class CRUDOpsTemplate {
 	
 private AbstractOperation absOp = new AbstractOperation();
+
+	public ArrayList<Object> Init(){
+		absOp.newOp();
+		absOp.addtargetName(null/*DependsOnSUT*/);
+		return absOp.createOp();
+	}
 	
 	public ArrayList<Object> Create(){
 		absOp.newOp();

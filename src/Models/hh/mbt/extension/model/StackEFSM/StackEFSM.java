@@ -25,7 +25,7 @@ public class StackEFSM implements FsmModel {
     
     //Context Variables
     private int Items;
-    private final int max=2;
+    private final int max=3;
     
 
     
@@ -50,8 +50,8 @@ public class StackEFSM implements FsmModel {
     public void reset(boolean testing) {
     	Items = 0;
     	
-    	//adapter = new AutoAdapter(new SimpleStackString(), true);
-    	adapter = new AutoAdapter(new SimpleStackDouble(), false);
+    	adapter = new AutoAdapter(new SimpleStackString(), false);
+    	//adapter = new AutoAdapter(new SimpleStackDouble(), true);
     	
     	state = States.Empty;
 
