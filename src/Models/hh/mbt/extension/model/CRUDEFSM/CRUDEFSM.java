@@ -1,4 +1,4 @@
-package hh.mbt.extension.model;
+package hh.mbt.extension.model.CRUDEFSM;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
@@ -7,6 +7,7 @@ import org.junit.Assert;
 
 import hh.mbt.extension.AutoAdapter;
 import hh.mbt.extension.DataStorage;
+import hh.mbt.extension.model.CRUDEFSM.AbstractOperations.FlightBookingOps;
 import nz.ac.waikato.modeljunit.Action;
 import nz.ac.waikato.modeljunit.FsmModel;
 import nz.ac.waikato.modeljunit.RandomTester;

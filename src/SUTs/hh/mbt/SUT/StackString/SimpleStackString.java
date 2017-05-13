@@ -1,15 +1,16 @@
-package hh.mbt.SUT;
+package hh.mbt.SUT.StackString;
 
-public class SimpleStackDouble {
+public class SimpleStackString {
 	
-	private ListElementDouble stackTop = null;
+
+	private ListElementString stackTop = null;
 
 	public boolean isEmpty() {
 		return stackTop == null;
 	}
 
-	public double pop() {
-		double returnValue = 0;
+	public String pop() {
+		String returnValue = null;
 		if (isEmpty()) {
 			throw new java.lang.IllegalStateException();
 		} else {
@@ -19,15 +20,15 @@ public class SimpleStackDouble {
 		return returnValue;
 	}
 	
-    public void push(double item) {
-    	ListElementDouble listElement = new ListElementDouble();
+    public void push(String item) {
+    	ListElementString listElement = new ListElementString();
         listElement.value = item;
         listElement.nextElement = stackTop;
         stackTop = listElement;   
     }
 
-	public double top() {
-		double returnValue = 0;
+	public String peek() {
+		String returnValue = null;
 		if (isEmpty()) {
 			throw new java.lang.IllegalStateException();
 		} else {

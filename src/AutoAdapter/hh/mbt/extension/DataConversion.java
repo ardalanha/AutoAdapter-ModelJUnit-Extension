@@ -1,6 +1,6 @@
 package hh.mbt.extension;
 
-import hh.mbt.extension.model.CRUDEFSM;
+import hh.mbt.extension.model.CRUDEFSM.CRUDEFSM;
 
 public class DataConversion {
 		
@@ -49,7 +49,7 @@ public class DataConversion {
 		output.setPassengerName(Name);
 		output.setFlightNumber("Flight - 1");
 		output.setNoOfSeatsBooked(NoOfSeats);
-		if(CRUDEFSM.getActionOnRun()==hh.mbt.extension.model.CRUDEFSM.Actions.Update)
+		if(CRUDEFSM.getActionOnRun()==hh.mbt.extension.model.CRUDEFSM.CRUDEFSM.Actions.Update)
 			output.setPNR((Long) storage.getStorage("PNR", EntryNum));
 		return output;
 		

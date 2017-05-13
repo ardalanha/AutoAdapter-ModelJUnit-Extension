@@ -1,6 +1,6 @@
 package hh.mbt.extension;
 
-import hh.mbt.extension.model.CRUDEFSM;
+import hh.mbt.extension.model.CRUDEFSM.CRUDEFSM;
 import io.codearte.jfairy.Fairy;
 
 public class DataGenerator {

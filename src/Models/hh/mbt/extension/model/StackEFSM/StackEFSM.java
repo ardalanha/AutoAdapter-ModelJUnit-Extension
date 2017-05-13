@@ -1,12 +1,13 @@
-package hh.mbt.extension.model;
+package hh.mbt.extension.model.StackEFSM;
 
 import java.util.ArrayList;
 import org.junit.Assert;
 
-import hh.mbt.SUT.SimpleStackDouble;
-import hh.mbt.SUT.SimpleStackString;
+import hh.mbt.SUT.StackDouble.SimpleStackDouble;
+import hh.mbt.SUT.StackString.SimpleStackString;
 import hh.mbt.extension.AutoAdapter;
 import hh.mbt.extension.DataStorage;
+import hh.mbt.extension.model.StackEFSM.AbstractOperations.StackOperations;
 import nz.ac.waikato.modeljunit.Action;
 import nz.ac.waikato.modeljunit.FsmModel;
 import nz.ac.waikato.modeljunit.RandomTester;

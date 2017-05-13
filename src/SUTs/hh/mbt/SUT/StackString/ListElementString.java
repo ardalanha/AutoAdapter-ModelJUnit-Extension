@@ -1,4 +1,4 @@
-package hh.mbt.SUT;
+package hh.mbt.SUT.StackString;
 
 
 public class ListElementString {
