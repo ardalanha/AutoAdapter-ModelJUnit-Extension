@@ -49,7 +49,7 @@ public class DataConversion {
 		output.setPassengerName(Name);
 		output.setFlightNumber("Flight - 1");
 		output.setNoOfSeatsBooked(NoOfSeats);
-		if(CRUDEFSM.getActionOnRun()==hh.mbt.extension.model.CRUDEFSM.CRUDEFSM.Actions.Update)
+		if(CRUDEFSM.getActionOnRun()=="Update")
 			output.setPNR((Long) storage.getStorage("PNR", EntryNum));
 		return output;
 		

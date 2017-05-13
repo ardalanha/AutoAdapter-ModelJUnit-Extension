@@ -28,7 +28,20 @@ public class CRUDEFSM implements FsmModel {
     
     private static int EntryFromModel;
     
-    public enum Actions { Create, Update, Delete };
+    public enum Actions {
+    	Create("Create"), Update("Update"), Delete("Delete");
+    	private String actionname; 
+        private Actions(String action) { 
+            this.actionname = action; 
+        } 
+        
+        @Override 
+        public String toString(){ 
+            return actionname; 
+        } 
+
+    	}
+    
     private static Actions actionOnRun;
 
     
@@ -179,8 +192,8 @@ public class CRUDEFSM implements FsmModel {
 		return NumberOfEntry;
 	}
 
-	public static Actions getActionOnRun() {
-		return actionOnRun;
+	public static String getActionOnRun() {
+		return actionOnRun.toString();
 	}
 
 	private static void setActionOnRun(Actions actionOnRun) {
