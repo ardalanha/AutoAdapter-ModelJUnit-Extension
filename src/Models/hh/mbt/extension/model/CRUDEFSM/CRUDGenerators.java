@@ -1,5 +1,15 @@
-The following generators are specific to CRUDEFSM and located in the extension generator repository:
+package hh.mbt.extension.model.CRUDEFSM;
 
+import hh.mbt.extension.DataStorage;
+import hh.mbt.extension.Generator;
+import io.codearte.jfairy.Fairy;
+
+public class CRUDGenerators {
+	
+	private DataStorage storage = new DataStorage();
+	private Fairy fakeData = Fairy.create();
+	
+	//CRUD Model Generators
 	@Generator(label = "RandModelEntry", type = Integer.class)
 	public Integer RandModelEntryGen(){
 		int out = fakeData.baseProducer().randomInt(CRUDEFSM.getNumberOfEntry()-1);
@@ -22,3 +32,13 @@ The following generators are specific to CRUDEFSM and located in the extension g
 		return out;
 			
 	}
+	
+	@Generator(label = "Value", type = Integer.class)
+	public Integer intGen(){
+		int min = 1;
+		int max = 20;
+		int testData = fakeData.baseProducer().randomBetween(min, max);
+		return testData;
+	}
+
+}

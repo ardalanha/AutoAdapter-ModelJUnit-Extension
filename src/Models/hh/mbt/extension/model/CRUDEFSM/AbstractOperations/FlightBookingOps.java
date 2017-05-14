@@ -23,6 +23,7 @@ public class FlightBookingOps {
 		absOp.addParameter(0, int.class, false, false, "Not Used");/*Generated Data Not Used-Only for converter invocation*/
 		absOp.addParameter(0, String.class, true, true, "Name");
 		absOp.addParameter(0, int.class, false, true, "Value");
+		absOp.specifyGenerator(0, "Value");
 		absOp.storeConcreteOutput("PNR");
 		return absOp.createOp();
 	}
@@ -34,6 +35,7 @@ public class FlightBookingOps {
 		absOp.specifyGenerator(0, "RandModelEntry");
 		absOp.addParameter(0, String.class, true, true, "Name");
 		absOp.addParameter(0, int.class, false, true, "Value");		
+		absOp.specifyGenerator(0, "Value");
 		return absOp.createOp();
 	}
 	

@@ -49,6 +49,8 @@ public class CRUDEFSM implements FsmModel {
     private DataStorage storage = new DataStorage();
     //conversion repository specific to target SUTs
     private CRUDConversionRepo convRep = new CRUDConversionRepo();
+    //Model specific generators
+    CRUDGenerators gens = new CRUDGenerators();
     
     //Adapter class connects abstract methods of model to SUT
     ClientSide SUT = new ClientSide();
@@ -62,7 +64,9 @@ public class CRUDEFSM implements FsmModel {
     final ArrayList<Object> Update = CrudOp.Update();
     final ArrayList<Object> Delete = CrudOp.Delete();
     
-    
+    public CRUDEFSM(){
+    	adapter.addGenerator(gens);
+    }
   
     
     

@@ -21,6 +21,7 @@ private AbstractOperation absOp = new AbstractOperation();
 		absOp.addtargetName(null/*DependsOnSUT*/);
 		absOp.addParameter(0/*DependsOnSUT*/, String.class, true, true, "Name");
 		absOp.addParameter(1/*DependsOnSUT*/, int.class, false, true, "Value");
+		absOp.specifyGenerator(1/*DependsOnSUT*/, "Value");
 		return absOp.createOp();
 	}
 	

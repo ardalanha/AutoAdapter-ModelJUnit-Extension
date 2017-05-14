@@ -28,6 +28,7 @@ public class AutoAdapter {
 	private static Map<String,ArrayList<Object>> freshMap=new HashMap<String,ArrayList<Object>>();
 	private static PrintWriter out;
 	private boolean onceAtEach=true;
+	private static Object extraGen=null;
 
 	
 	public AutoAdapter(Object sut, boolean log){
@@ -41,6 +42,7 @@ public class AutoAdapter {
 		}
 	}
 	
+	//this constructor overwrites the main conversion repo (converters in DataConversion Class)
 	public AutoAdapter(Object sut, Object convRep, boolean log){
 		this.sut=sut;
 		conversionrepo=convRep;
@@ -50,6 +52,10 @@ public class AutoAdapter {
 			onceAtFirst = false;
 			this.logInit();
 		}
+	}
+	
+	public void addGenerator(Object gens){
+		extraGen = gens;
 	}
 	
 	private void logInit(){
@@ -122,7 +128,7 @@ public class AutoAdapter {
 						args.add(Param.get(3));
 						args.add(Param.get(4));
 						logPrintLine("trying to generate abstract data. /label: "+Param.get(3)+"/target order: "+i+"/type: "+type.getName()+"/generator: "+Param.get(4));
-						Object genTestData=this.generateData(type, args);
+						Object genTestData=this.generateData(type, args, generate);
 						if(!(type==targetType && Param.get(5).equals("default"))){
 							logPrintLine("trying to concretize/convert generated data. /target type: "+targetType.getName()+"/converter: "+Param.get(5));
 							methodArgsArr.add(this.convert(type, targetType, genTestData, (String) Param.get(5)));
@@ -142,7 +148,7 @@ public class AutoAdapter {
 							args.add(Param.get(3+(j*6)));
 							args.add(Param.get(4+(j*6)));
 							logPrintLine("trying to generate abstract data. /label: "+Param.get(3+(j*6))+"/target order: "+i+"/type: "+type.getName()+"/generator: "+Param.get(4+(j*6)));
-							genInputs[j] = this.generateData(type, args);
+							genInputs[j] = this.generateData(type, args, generate);
 							args.clear();
 						}
 						targetType=primitive2Object(m.getParameterTypes()[i]);
@@ -157,7 +163,7 @@ public class AutoAdapter {
 					args.add("omitted SUT parameter");
 					args.add("default");
 					logPrintLine("trying to generate input data. /label: omitted SUT parameter/target order: "+i+"/target type: "+targetType.getName()+"/generator: default");
-					methodArgsArr.add(this.generateData(targetType, args));
+					methodArgsArr.add(this.generateData(targetType, args, generate));
 				}
 			}
 			methodArgs=methodArgsArr.toArray();
@@ -209,12 +215,12 @@ public class AutoAdapter {
 	}
 
 	
-	
-	private Object generateData(Class<?> type, ArrayList<Object> args){
+	private boolean extragenflag=true;
+	private Object generateData(Class<?> type, ArrayList<Object> args, Object gen){
 		Object out=null;
 		String genLabel = (String) args.get(3);
 		//match and convert
-		Method[] methods=generate.getClass().getMethods();
+		Method[] methods=gen.getClass().getMethods();
 		boolean errorMsgFlag=true;
 		for (Method method : methods){
 			 if (method.isAnnotationPresent(Generator.class)){
@@ -231,7 +237,7 @@ public class AutoAdapter {
 								int countTry=0;
 								while(true){
 									try {
-										out = method.invoke(generate);
+										out = method.invoke(gen);
 									} catch (IllegalArgumentException e) {
 										AutoAdapter.logPrintLine("Generator Error: "+e.toString());
 									} catch (IllegalAccessException e) {
@@ -253,7 +259,7 @@ public class AutoAdapter {
 							}
 						 else{
 							 try {
-									out = method.invoke(generate);
+									out = method.invoke(gen);
 								} catch (IllegalArgumentException e) {
 									AutoAdapter.logPrintLine("Generator Error: "+e.toString());
 								} catch (IllegalAccessException e) {
@@ -268,9 +274,16 @@ public class AutoAdapter {
 				 }
 			 }
 		}
+		
 		if(errorMsgFlag){
+			if(extraGen!=null&&extragenflag){
+				extragenflag=false;
+				return generateData(type, args, extraGen);
+				
+			}
 			AutoAdapter.logPrintLine("Error: "+genLabel+" generator for "+type+" is not found");
 		}
+		extragenflag=true;
 		
 		return out;
 	}
