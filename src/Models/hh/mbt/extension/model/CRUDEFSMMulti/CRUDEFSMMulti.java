@@ -62,7 +62,7 @@ public class CRUDEFSMMulti implements FsmModel {
     //Adapter class connects abstract methods of model to SUT
     private AutoAdapter adapter = new AutoAdapter(SUT, convRep, true);
     
-    //Choose SUT operations
+    //Can target both of SUTs
     private MultipleSUTOps CrudOp = new MultipleSUTOps();
     
     final ArrayList<Object> Init = CrudOp.Init();
