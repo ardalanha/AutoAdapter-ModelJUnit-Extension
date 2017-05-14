@@ -42,7 +42,7 @@ public class AutoAdapter {
 		}
 	}
 	
-	//this constructor overwrites the main conversion repo (converters in DataConversion Class)
+	//This constructor overwrites the main conversion repo (converters in DataConversion Class)
 	public AutoAdapter(Object sut, Object convRep, boolean log){
 		this.sut=sut;
 		conversionrepo=convRep;

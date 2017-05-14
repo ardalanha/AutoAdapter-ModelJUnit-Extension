@@ -3,9 +3,11 @@ package hh.mbt.extension.model.CRUDEFSM;
 import java.util.ArrayList;
 import org.junit.Assert;
 
+import hh.mbt.SUT.CourseGradeManager.GradeManager;
 import hh.mbt.extension.AutoAdapter;
 import hh.mbt.extension.DataStorage;
 import hh.mbt.extension.model.CRUDEFSM.AbstractOperations.FlightBookingOps;
+import hh.mbt.extension.model.CRUDEFSM.AbstractOperations.GradeManagerOps;
 import nz.ac.waikato.modeljunit.Action;
 import nz.ac.waikato.modeljunit.FsmModel;
 import nz.ac.waikato.modeljunit.RandomTester;
@@ -47,16 +49,23 @@ public class CRUDEFSM implements FsmModel {
     
     //Generated test data storage
     private DataStorage storage = new DataStorage();
-    //conversion repository specific to target SUTs
+    
+    //Conversion repository specific to target SUTs
     private CRUDConversionRepo convRep = new CRUDConversionRepo();
+    
     //Model specific generators
     CRUDGenerators gens = new CRUDGenerators();
     
+    //Choose SUT
+    //ClientSide SUT = new ClientSide();
+    GradeManager SUT = new GradeManager();
+    
     //Adapter class connects abstract methods of model to SUT
-    ClientSide SUT = new ClientSide();
     private AutoAdapter adapter = new AutoAdapter(SUT, convRep, true);
     
-    private FlightBookingOps CrudOp = new FlightBookingOps();
+    //Choose SUT operations
+    //private FlightBookingOps CrudOp = new FlightBookingOps();
+    private GradeManagerOps CrudOp = new GradeManagerOps();
     
     final ArrayList<Object> Init = CrudOp.Init();
     final ArrayList<Object> Create = CrudOp.Create();
@@ -147,14 +156,22 @@ public class CRUDEFSM implements FsmModel {
     	NumberOfEntry--;
     	
     	
-    	//Assertion (Retrieve Deleted Entry)
+    	//Assertion (Retrieve Deleted Entry) - Just for FlightBooking rest client
+    	/*
     	Object[] actualE = (Object[]) adapter.adapt(Retrieve);
     	Assert.assertNull("Assert that the rand entry is deleted",actualE);
+    	*/
     	
     	//Update Storage State
     	storage.getRemStorage("Name", (Integer)storage.topStorage("RandModelEntry"));
     	storage.getRemStorage("Value", (Integer)storage.topStorage("RandModelEntry"));
-    	storage.getRemStorage("PNR", (Integer)storage.popStorage("RandModelEntry"));
+    	try {
+    		storage.getRemStorage("PNR", (Integer)storage.topStorage("RandModelEntry"));
+    	}catch (NullPointerException e) {
+    		//Do nothing
+    	}    	
+    	storage.popStorage("RandModelEntry");
+    	
     	
     	//Assertion (RetrieveAll)
     	for(int i = 0; i < NumberOfEntry; i++){

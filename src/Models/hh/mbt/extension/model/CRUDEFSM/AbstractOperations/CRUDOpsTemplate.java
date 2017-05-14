@@ -8,7 +8,7 @@ import hh.mbt.extension.AbstractOperation;
 
 class CRUDOpsTemplate {
 	
-private AbstractOperation absOp = new AbstractOperation();
+	private AbstractOperation absOp = new AbstractOperation();
 
 	public ArrayList<Object> Init(){
 		absOp.newOp();
@@ -31,7 +31,8 @@ private AbstractOperation absOp = new AbstractOperation();
 		absOp.addParameter(0/*DependsOnSUT*/, int.class, true, true, "RandModelEntry");
 		absOp.specifyGenerator(0/*DependsOnSUT*/, "RandModelEntry");
 		absOp.addParameter(1/*DependsOnSUT*/, String.class, true, true, "Name");
-		absOp.addParameter(2/*DependsOnSUT*/, int.class, false, true, "Value");		
+		absOp.addParameter(2/*DependsOnSUT*/, int.class, false, true, "Value");	
+		absOp.specifyGenerator(2/*DependsOnSUT*/, "Value");
 		return absOp.createOp();
 	}
 	

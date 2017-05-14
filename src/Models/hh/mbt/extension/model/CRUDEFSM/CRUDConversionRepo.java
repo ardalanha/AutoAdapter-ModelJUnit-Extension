@@ -1,5 +1,8 @@
 package hh.mbt.extension.model.CRUDEFSM;
 
+import hh.mbt.SUT.CourseGradeManager.Course;
+import hh.mbt.SUT.CourseGradeManager.Student;
+import hh.mbt.SUT.CourseGradeManager.StudentScore;
 import hh.mbt.extension.Converter;
 import hh.mbt.extension.DataStorage;
 
@@ -49,5 +52,44 @@ public class CRUDConversionRepo {
 		return null;
 		
 	}
+	
+	//CRUD - Grade Manager Converters
+	@Converter(type = String.class, targetType = Course.class)
+	public Course Str2CourseConv(String input){
+		
+		Course output = new Course();
+		output.setCourseName(input);
+		return output;
+		
+	}
+	
+	@Converter(targetType = StudentScore.class, multiple = true)
+	public StudentScore StudentScoreAbs2Conc(String Name, Integer Score){
+		
+		StudentScore output = new StudentScore();
+		Course course = new Course();
+		course.setCourseName((String) storage.topStorage("CourseName"));
+		output.setCourse(course);
+		Student student = new Student();
+		student.setFirstName(Name);
+		output.setStudent(student);
+		output.setScore(Score);
+		
+		return output;
+		
+	}
+	
+	@Converter(type = StudentScore.class, targetType = Object[].class)
+	public Object[] StudentScoreConc2Abs(StudentScore input){
+		Object output[] = new Object[2];
+		Student student;
+		student = input.getStudent();
+		output[0] = student.getFirstName();
+		output[1] = input.getScore();		
+		return output;
+		
+	}
+	
+	
 
 }
