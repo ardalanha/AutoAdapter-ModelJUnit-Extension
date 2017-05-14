@@ -4,6 +4,9 @@ import java.util.ArrayList;
 
 import hh.mbt.extension.AbstractOperation;
 
+
+//CRUD abstract operations with Grade Manager concrete configuration
+
 public class GradeManagerOps {
 	
 	private AbstractOperation absOp = new AbstractOperation();

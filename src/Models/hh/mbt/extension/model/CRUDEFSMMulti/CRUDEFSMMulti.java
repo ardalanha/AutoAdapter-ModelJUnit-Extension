@@ -1,4 +1,4 @@
-package hh.mbt.extension.model.CRUDEFSM;
+package hh.mbt.extension.model.CRUDEFSMMulti;
 
 import java.util.ArrayList;
 import org.junit.Assert;
@@ -6,8 +6,7 @@ import org.junit.Assert;
 import hh.mbt.SUT.CourseGradeManager.GradeManager;
 import hh.mbt.extension.AutoAdapter;
 import hh.mbt.extension.DataStorage;
-import hh.mbt.extension.model.CRUDEFSM.AbstractOperations.FlightBookingOps;
-import hh.mbt.extension.model.CRUDEFSM.AbstractOperations.GradeManagerOps;
+import hh.mbt.extension.model.CRUDEFSMMulti.AbstractOperations.MultipleSUTOps;
 import nz.ac.waikato.modeljunit.Action;
 import nz.ac.waikato.modeljunit.FsmModel;
 import nz.ac.waikato.modeljunit.RandomTester;
@@ -20,7 +19,7 @@ import restClientPackage.ClientSide;
 
 //Link for FlightBooking SUT: https://github.com/raminarmanfar/Online-Ticket-booking-Distributed-program-using-RESTFul-Tomcat-JAVA-
 
-public class CRUDEFSM implements FsmModel {
+public class CRUDEFSMMulti implements FsmModel {
 
 
     
@@ -51,21 +50,20 @@ public class CRUDEFSM implements FsmModel {
     private DataStorage storage = new DataStorage();
     
     //Conversion repository specific to target SUTs
-    private CRUDConversionRepo convRep = new CRUDConversionRepo();
+    private CRUDConversionRepoMulti convRep = new CRUDConversionRepoMulti();
     
     //Model specific generators
-    CRUDGenerators gens = new CRUDGenerators();
+    CRUDGeneratorsMulti gens = new CRUDGeneratorsMulti();
     
     //Choose SUT
-    //ClientSide SUT = new ClientSide();
-    GradeManager SUT = new GradeManager();
+    ClientSide SUT = new ClientSide();
+    //GradeManager SUT = new GradeManager();
     
     //Adapter class connects abstract methods of model to SUT
     private AutoAdapter adapter = new AutoAdapter(SUT, convRep, true);
     
     //Choose SUT operations
-    //private FlightBookingOps CrudOp = new FlightBookingOps();
-    private GradeManagerOps CrudOp = new GradeManagerOps();
+    private MultipleSUTOps CrudOp = new MultipleSUTOps();
     
     final ArrayList<Object> Init = CrudOp.Init();
     final ArrayList<Object> Create = CrudOp.Create();
@@ -73,7 +71,7 @@ public class CRUDEFSM implements FsmModel {
     final ArrayList<Object> Update = CrudOp.Update();
     final ArrayList<Object> Delete = CrudOp.Delete();
     
-    public CRUDEFSM(){
+    public CRUDEFSMMulti(){
     	adapter.addGenerator(gens);
     }
   
@@ -192,7 +190,7 @@ public class CRUDEFSM implements FsmModel {
     
 
     public static void main(String[] argv) {
-    	CRUDEFSM model = new CRUDEFSM();
+    	CRUDEFSMMulti model = new CRUDEFSMMulti();
         //Tester tester = new LookaheadTester(model);
         RandomTester tester = new RandomTester(model);
         //Tester tester = new AllRoundTester(model);
@@ -219,7 +217,7 @@ public class CRUDEFSM implements FsmModel {
 	}
 
 	private static void setActionOnRun(Actions actionOnRun) {
-		CRUDEFSM.actionOnRun = actionOnRun;
+		CRUDEFSMMulti.actionOnRun = actionOnRun;
 	}
 
 	public static int getEntryFromModel() {
