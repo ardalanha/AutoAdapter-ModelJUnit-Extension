@@ -47,11 +47,12 @@ public class CRUDEFSM implements FsmModel {
     
     //Generated test data storage
     private DataStorage storage = new DataStorage();
-    
+    //conversion repository specific to target SUTs
+    private CRUDConversionRepo convRep = new CRUDConversionRepo();
     
     //Adapter class connects abstract methods of model to SUT
     ClientSide SUT = new ClientSide();
-    private AutoAdapter adapter = new AutoAdapter(SUT, true);
+    private AutoAdapter adapter = new AutoAdapter(SUT, convRep, true);
     
     private FlightBookingOps CrudOp = new FlightBookingOps();
     

@@ -42,9 +42,7 @@ public class FlightBookingOps {
 		absOp.addtargetName("DeleteBookedFlight");
 		absOp.addParameter(0, int.class, true, true, "RandModelEntry");
 		absOp.specifyGenerator(0, "RandModelEntry");
-		absOp.specifyConversion(0, "EntryNum2PNR");
 		absOp.addParameter(1, int.class, false, false, "Not Used");/*Generated Data Not Used-Only for converter invocation*/
-		absOp.specifyConversion(1, "EntryNum2Name");
 		return absOp.createOp();
 	}
 	
@@ -53,7 +51,6 @@ public class FlightBookingOps {
 		absOp.addtargetName("GetBookedFlight");
 		absOp.addParameter(0, int.class, false, false, "EntryFromModel/StorageRand");
 		absOp.specifyGenerator(0, "EntryFromModel/StorageRand");
-		absOp.specifyConversion(0, "EntryNum2PNR");
 		absOp.setReturnType(Object[].class);
 		return absOp.createOp();
 	}

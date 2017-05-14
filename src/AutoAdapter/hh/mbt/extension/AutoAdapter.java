@@ -19,7 +19,7 @@ public class AutoAdapter {
 	
 	private Object sut;
 	private DataStorage storage = new DataStorage();
-	private static DataConversion convert = new DataConversion();
+	private static Object conversionrepo;
 	private static DataGenerator generate = new DataGenerator();
 	static protected File log;
 	static private boolean logFlag;
@@ -32,6 +32,18 @@ public class AutoAdapter {
 	
 	public AutoAdapter(Object sut, boolean log){
 		this.sut=sut;
+		conversionrepo = new DataConversion();
+		storage.resetStoreStorage();
+		logFlag=log;
+		if(logFlag&&onceAtFirst){
+			onceAtFirst = false;
+			this.logInit();
+		}
+	}
+	
+	public AutoAdapter(Object sut, Object convRep, boolean log){
+		this.sut=sut;
+		conversionrepo=convRep;
 		storage.resetStoreStorage();
 		logFlag=log;
 		if(logFlag&&onceAtFirst){
@@ -225,7 +237,7 @@ public class AutoAdapter {
 									} catch (IllegalAccessException e) {
 										AutoAdapter.logPrintLine("Generator Error: "+e.toString());
 									} catch (InvocationTargetException e) {
-										AutoAdapter.logPrintLine("Generator Error: "+e.toString());
+										AutoAdapter.logPrintLine("Generator Error: "+e.getTargetException());
 									}
 									if(!freshBackupList.contains(out)){
 										freshBackupList.add(out);
@@ -266,7 +278,7 @@ public class AutoAdapter {
 	
 	private Object convert(Class<?> type, Class<?> targetType, Object value, String convLabel) {
 		//match and convert
-		Method[] methods=convert.getClass().getMethods();
+		Method[] methods=conversionrepo.getClass().getMethods();
 		boolean errorMsgFlag=true;
 		for (Method method : methods){
 			 if (method.isAnnotationPresent(Converter.class)){
@@ -277,7 +289,7 @@ public class AutoAdapter {
 							 errorMsgFlag=false;
 							 AutoAdapter.logPrintLine(convLabel+" converter from "+type.getName()+" to "+targetType.getName()+" is found");
 							 try {
-								value = method.invoke(convert,value);
+								value = method.invoke(conversionrepo,value);
 							} catch (IllegalArgumentException e) {
 								AutoAdapter.logPrintLine("Converter Error: "+e.toString());
 							} catch (IllegalAccessException e) {
@@ -300,7 +312,7 @@ public class AutoAdapter {
 	
 	private Object convertMulti(Class<?> targetType, Object[] genInputs, String convLabel) {
 		Object value = null;
-		Method[] methods=convert.getClass().getMethods();
+		Method[] methods=conversionrepo.getClass().getMethods();
 		boolean errorMsgFlag=true;
 		for (Method method : methods){
 			if (method.isAnnotationPresent(Converter.class)){
@@ -311,7 +323,7 @@ public class AutoAdapter {
 							 errorMsgFlag=false;
 							 AutoAdapter.logPrintLine(convLabel+" many to one converter to "+targetType.getName()+" is found");
 							 try {
-								value = method.invoke(convert,genInputs);
+								value = method.invoke(conversionrepo,genInputs);
 							} catch (IllegalArgumentException e) {
 								AutoAdapter.logPrintLine("Many2One Converter Error: "+e.toString());
 							} catch (IllegalAccessException e) {

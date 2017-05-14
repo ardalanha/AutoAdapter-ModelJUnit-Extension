@@ -1,5 +1,14 @@
-The following converters are specific to FlightBooking SUT and located in the extension conversion repository:
+package hh.mbt.extension.model.CRUDEFSM;
 
+import hh.mbt.extension.Converter;
+import hh.mbt.extension.DataStorage;
+
+public class CRUDConversionRepo {
+	
+	private DataStorage storage = new DataStorage();
+
+	
+	//CRUD - FlightBooking Converters
 	@Converter(targetType = restClientPackage.BookingFlight.class, multiple = true)
 	public restClientPackage.BookingFlight BookingFlightAbs2Conc(Integer EntryNum, String Name, Integer NoOfSeats){
 		
@@ -13,7 +22,7 @@ The following converters are specific to FlightBooking SUT and located in the ex
 		
 	}
 	
-	@Converter(label = "EntryNum2PNR", type = Integer.class, targetType = Long.class)
+	@Converter(type = Integer.class, targetType = Long.class)
 	public Long EntryNum2PNRConv(Integer input){
 		
 		long output = (Long) storage.getStorage("PNR", input);			
@@ -21,7 +30,7 @@ The following converters are specific to FlightBooking SUT and located in the ex
 		
 	}
 	
-	@Converter(label = "EntryNum2Name", type = Integer.class, targetType = String.class)
+	@Converter(type = Integer.class, targetType = String.class)
 	public String EntryNum2NameConv(Integer _null_){
 		
 		String output = (String) storage.getStorage("Name", (Integer)storage.topStorage("RandModelEntry"));
@@ -40,3 +49,5 @@ The following converters are specific to FlightBooking SUT and located in the ex
 		return null;
 		
 	}
+
+}
